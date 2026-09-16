@@ -1,0 +1,3700 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Version: 2024-09-15-Services-Redesign -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Consultant - Growth Strategy for D2C, B2C & B2B</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        // Industry Case Study Data
+        const industryData = {
+            education: {
+                name: 'Education',
+                icon: '🎓',
+                caseStudies: [
+                    { id: 'edtech-platform', name: 'EdTech Platform', title: '$400K → $1.8M ARR in 12 Months', metrics: ['3.5x Growth', '+284% Organic', '2.4x CAC'] },
+                    { id: 'online-courses', name: 'Online Courses Platform', title: '+520% Student Enrollment in 18 Months', metrics: ['+520% Enrollments', '35% Lower CAC', '$2.1M Revenue'] }
+                ]
+            },
+            dental: {
+                name: 'Dental',
+                icon: '🦷',
+                caseStudies: [
+                    { id: 'dental-clinic-chain', name: 'Dental Clinic Chain', title: '+340% New Patient Appointments', metrics: ['+340% Appointments', '42% CAC Reduction', '95% Booking Rate'] },
+                    { id: 'orthodontics', name: 'Orthodontics Practice', title: '$120K → $680K Revenue in 14 Months', metrics: ['5.7x Growth', '+289% Leads', '#1 Local Rankings'] }
+                ]
+            },
+            healthcare: {
+                name: 'Healthcare',
+                icon: '⚕️',
+                caseStudies: [
+                    { id: 'telehealth-platform', name: 'Telehealth Platform', title: '$600K → $3.2M ARR in 15 Months', metrics: ['5.3x Growth', '450K+ Impressions', '3.8K Keywords #1-10'] },
+                    { id: 'wellness-clinic', name: 'Wellness Clinic', title: '+425% Patient Bookings in 12 Months', metrics: ['+425% Bookings', '-55% CAC', '89% Retention'] }
+                ]
+            },
+            ecommerce: {
+                name: 'E-Commerce',
+                icon: '🛒',
+                caseStudies: [
+                    { id: 'd2c-wellness', name: 'D2C Wellness Brand', title: '$800K → $3.2M ARR in 18 Months', metrics: ['4x Growth', '-40% Ad Spend', '68% Organic Revenue'] },
+                    { id: 'fashion-retail', name: 'Fashion Retailer', title: '+265% Organic Revenue in 9 Months', metrics: ['+265% Organic', 'AED 180K Revenue', '87 Keywords #1-10'] }
+                ]
+            },
+            saas: {
+                name: 'SaaS',
+                icon: '💻',
+                caseStudies: [
+                    { id: 'saas-platform', name: 'SaaS Growth Platform', title: '$1.2M → $4.1M ARR in 14 Months', metrics: ['3.4x Growth', '156 SQL/Month', '32% Win Rate'] },
+                    { id: 'analytics-platform', name: 'Analytics Platform', title: '$500K → $2.1M ARR in 14 Months', metrics: ['3.2x Growth', '-38% CAC', '320% Revenue Growth'] }
+                ]
+            },
+            b2b: {
+                name: 'B2B Services',
+                icon: '📊',
+                caseStudies: [
+                    { id: 'enterprise-software', name: 'Enterprise Software', title: '+285% Qualified Leads in 12 Months', metrics: ['+285% Leads', '-52% CPL', '47 Leads/Week'] },
+                    { id: 'consulting-firm', name: 'Consulting Firm', title: '+380% Organic Leads in 8 Months', metrics: ['+380% Leads', '340 Keywords #1-10', '$1.2M Pipeline'] }
+                ]
+            },
+            hospitality: {
+                name: 'Hospitality',
+                icon: '🏨',
+                caseStudies: [
+                    { id: 'hotel-chain', name: 'Hotel Chain', title: '+285% Bookings in 10 Months', metrics: ['+285% Bookings', '42% Higher ADR', '$4.2M Revenue'] },
+                    { id: 'restaurant-group', name: 'Restaurant Group', title: '+520% Table Reservations', metrics: ['+520% Reservations', '3.2x Revenue Growth', '89% Fill Rate'] }
+                ]
+            },
+            realestate: {
+                name: 'Real Estate',
+                icon: '🏠',
+                caseStudies: [
+                    { id: 'property-dev', name: 'Property Developer', title: '+425% Qualified Leads in 12 Months', metrics: ['+425% Leads', '$8.5M Sales Pipeline', '68% Conversion'] },
+                    { id: 'realestate-agency', name: 'Real Estate Agency', title: '$200K → $1.2M Revenue in 18 Months', metrics: ['6x Growth', '+340% Leads', '#1 Local Market'] }
+                ]
+            },
+            fitness: {
+                name: 'Fitness & Wellness',
+                icon: '💪',
+                caseStudies: [
+                    { id: 'gym-chain', name: 'Gym Chain', title: '+380% Memberships in 14 Months', metrics: ['+380% Memberships', '45% Lower CAC', '2,400 Members'] },
+                    { id: 'wellness-app', name: 'Wellness App', title: '50K → 350K Downloads in 12 Months', metrics: ['7x Growth', '+285% Active Users', '$1.8M Revenue'] }
+                ]
+            },
+            legal: {
+                name: 'Legal Services',
+                icon: '⚖️',
+                caseStudies: [
+                    { id: 'law-firm', name: 'Law Firm', title: '+340% Qualified Cases in 12 Months', metrics: ['+340% Cases', '-65% CAC', '$2.1M Revenue Growth'] },
+                    { id: 'legal-tech', name: 'Legal Tech Platform', title: '$300K → $1.5M ARR in 15 Months', metrics: ['5x Growth', '340 Keywords #1-10', '4.2K Monthly Leads'] }
+                ]
+            }
+        };
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #7F77DD;
+            --secondary: #1D9E75;
+            --accent: #378ADD;
+            --dark: #26215C;
+            --light: #F9F8FC;
+            --text: #2C2C2A;
+            --text-secondary: #888780;
+            --border: #E8E6E1;
+            --bg-hover: #F1EFE8;
+            --success: #639922;
+            --warning: #BA7517;
+            --danger: #E24B4A;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: #FFFFFF;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 16px 40px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary);
+            white-space: nowrap;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 32px;
+            height: 32px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            flex-shrink: 0;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .nav-toggle.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .nav-toggle.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        .nav-link-cta {
+            display: none;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            margin: 0 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a.active {
+            color: var(--primary);
+            font-weight: 600;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 2px;
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            border: none;
+            transition: background 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: var(--dark);
+        }
+
+        /* SECTIONS */
+        section {
+            
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section.alt {
+            background: var(--light);
+        }
+
+        h1 {
+            font-size: 52px;
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: var(--text);
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .hero-section {
+           
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content {
+            padding-right: 40px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            /* background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); */
+            background: linear-gradient(135deg, #E8DFF6 0%, #D4EDE4 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #E8F5E9;
+            color: var(--success);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary) ;
+            border: 2px solid #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: var(--dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light);
+        }
+
+        /* STATS */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 24px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* CASE STUDY FILTERS */
+        .casestudy-filters {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--text);
+        }
+
+        .filter-btn:hover {
+            background: var(--light);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .casestudy-filters {
+                gap: 8px;
+                margin-bottom: 30px;
+            }
+
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 13px;
+            }
+        }
+
+        .no-results-message {
+            display: none;
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--light);
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+
+        .no-results-message .no-results-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .no-results-message h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .no-results-message p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        /* CASE STUDIES */
+        .case-study {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            align-items: center;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 32px;
+            transition: all 0.3s;
+        }
+
+        .case-study:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            border-color: var(--primary);
+        }
+
+        .case-study.reverse {
+            grid-template-columns: 1fr 300px;
+        }
+
+        .case-study-image {
+            width: 100%;
+            height: 240px;
+            background: linear-gradient(135deg, #E8DFF6 0%, #D4EDE4 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .case-study-content h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .case-tag {
+            display: inline-block;
+            font-size: 11px;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .result-item {
+            background: var(--light);
+            padding: 16px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .result-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .result-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* CATEGORY CAROUSEL (per-industry clients, sourced from case-studies-data.json) */
+        .category-carousel-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .category-carousel-container {
+            flex: 1;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x proximity;
+            border-radius: 12px;
+        }
+
+        .category-carousel-track {
+            display: flex;
+            gap: 24px;
+            padding: 4px 4px 16px;
+        }
+
+        .category-case-card {
+            flex: 0 0 320px;
+            scroll-snap-align: start;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-case-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        .category-case-client {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .category-case-card h4 {
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .category-case-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .category-case-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .category-case-tag {
+            background: var(--light);
+            color: var(--primary);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 6px 10px;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .category-case-card {
+                flex: 0 0 260px;
+                padding: 20px;
+            }
+        }
+
+        /* SERVICES */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 24px rgba(127, 119, 221, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .service-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 13px;
+        }
+
+        /* TESTIMONIALS */
+        /* Testimonials Scrolling Carousel */
+        .testimonials-carousel-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 60px;
+            position: relative;
+            width: 100%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonials-carousel-container {
+            flex: 1;
+            overflow: hidden;
+            border-radius: 12px;
+            max-width: 1200px;
+            padding: 0 40px;
+        }
+
+        .testimonials-carousel-track {
+            display: flex;
+            gap: 24px;
+            transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transform: translateX(0);
+        }
+
+        .testimonial-card-carousel {
+            flex: 0 0 calc(33.333% - 16px);
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .testimonial-card-carousel:hover {
+            border-color: var(--primary);
+            box-shadow: 0 16px 40px rgba(127, 119, 221, 0.2);
+            transform: translateY(-6px);
+        }
+
+        .testimonial-card-carousel .testimonial-stars {
+            font-size: 16px;
+            color: #FFD700;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-card-carousel .testimonial-text {
+            font-size: 14px;
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+            flex: 1;
+        }
+
+        .testimonial-card-carousel .testimonial-author {
+            font-weight: 700;
+            color: var(--text);
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-card-carousel .testimonial-role {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Industry Selector Popup */
+        .industry-popup-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .industry-popup-modal.active {
+            display: flex;
+        }
+
+        .industry-popup-content {
+            background: white;
+            border-radius: 16px;
+            padding: 0;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideDown 0.4s ease;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .industry-popup-header {
+            padding: 32px 24px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+
+        .industry-popup-header h2 {
+            margin: 0 0 8px 0;
+            font-size: 24px;
+            color: var(--text);
+        }
+
+        .industry-popup-header p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .industry-popup-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 36px;
+            height: 36px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text);
+            transition: 0.3s;
+        }
+
+        .industry-popup-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .industry-popup-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            padding: 32px 24px;
+        }
+
+        .industry-option {
+            background: var(--light);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .industry-option:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(127, 119, 221, 0.2);
+        }
+
+        .industry-icon {
+            font-size: 32px;
+        }
+
+        .industry-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .industry-popup-footer {
+            padding: 16px 24px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+        }
+
+        .industry-popup-footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .industry-popup-footer a:hover {
+            color: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .industry-popup-content {
+                width: 95%;
+                max-width: 100%;
+            }
+
+            .industry-popup-header {
+                padding: 24px 16px;
+            }
+
+            .industry-popup-header h2 {
+                font-size: 20px;
+            }
+
+            .industry-popup-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                padding: 24px 16px;
+            }
+
+            .industry-option {
+                padding: 16px;
+                gap: 8px;
+            }
+
+            .industry-icon {
+                font-size: 28px;
+            }
+
+            .industry-name {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .industry-popup-content {
+                width: 100%;
+                border-radius: 12px;
+            }
+
+            .industry-popup-header {
+                padding: 20px 12px;
+            }
+
+            .industry-popup-header h2 {
+                font-size: 18px;
+            }
+
+            .industry-popup-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                padding: 20px 12px;
+            }
+
+            .industry-option {
+                padding: 12px;
+            }
+
+            .industry-icon {
+                font-size: 24px;
+            }
+
+            .industry-name {
+                font-size: 12px;
+            }
+        }
+
+        /* Image Popup Modal */
+        .image-popup-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .image-popup-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            background: white;
+            border-radius: 16px;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-image {
+            width: 100%;
+            height: auto;
+            max-height: 70vh;
+            object-fit: contain;
+            display: block;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 1001;
+            color: #2D2D3D;
+        }
+
+        .modal-close:hover {
+            background: white;
+            transform: rotate(90deg);
+        }
+
+        .modal-info {
+            padding: 24px;
+            background: white;
+            border-top: 1px solid var(--border);
+        }
+
+        .modal-info h3 {
+            margin: 0 0 8px 0;
+            font-size: 18px;
+            color: var(--text);
+        }
+
+        .modal-info p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 95%;
+                max-width: 100%;
+                border-radius: 12px;
+            }
+
+            .modal-image {
+                max-height: 60vh;
+            }
+
+            .modal-info {
+                padding: 16px;
+            }
+
+            .modal-info h3 {
+                font-size: 16px;
+            }
+
+            .modal-info p {
+                font-size: 13px;
+            }
+
+            .modal-close {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modal-content {
+                width: 100%;
+                border-radius: 8px;
+            }
+
+            .modal-image {
+                max-height: 50vh;
+            }
+
+            .modal-info {
+                padding: 12px;
+            }
+
+            .modal-info h3 {
+                font-size: 14px;
+            }
+
+            .modal-info p {
+                font-size: 12px;
+            }
+
+            .modal-close {
+                width: 36px;
+                height: 36px;
+                font-size: 18px;
+            }
+        }
+
+        /* Image Popup on Hover */
+        .image-popup-carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #E8DFF6 0%, #D4EDE4 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: scale(0.95);
+            overflow: hidden;
+            z-index: 20;
+            inset: 0;
+            cursor: pointer;
+        }
+
+        .testimonial-card-carousel:hover .image-popup-carousel {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        .image-popup-carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .testimonial-card-carousel:hover .image-popup-carousel img {
+            transform: scale(1.05);
+        }
+
+        /* Navigation Buttons */
+        .carousel-nav-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(127, 119, 221, 0.2);
+        }
+
+        .nav-left {
+            margin-right: 8px;
+        }
+
+        .nav-right {
+            margin-left: 8px;
+        }
+
+        .carousel-nav-btn:hover {
+            background: var(--secondary);
+            transform: scale(1.1);
+            box-shadow: 0 8px 24px rgba(29, 158, 117, 0.3);
+        }
+
+        .carousel-nav-btn:active {
+            transform: scale(0.95);
+        }
+
+        .carousel-nav-btn:disabled {
+            background: var(--border);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        /* Carousel Indicators */
+        .carousel-indicators-carousel {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .carousel-indicators-carousel .indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--border);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-indicators-carousel .indicator.active {
+            background: var(--primary);
+            width: 24px;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 1024px) {
+            .testimonial-card-carousel {
+                flex: 0 0 calc(50% - 12px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-carousel-wrapper {
+                flex-direction: column;
+                gap: 16px;
+                padding: 0 16px;
+                width: 100%;
+            }
+
+            .testimonials-carousel-container {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .testimonial-card-carousel {
+                flex: 0 0 calc(100% - 8px);
+                padding: 20px;
+                min-height: 260px;
+            }
+
+            .testimonial-card-carousel .testimonial-text {
+                font-size: 13px;
+                margin-bottom: 16px;
+            }
+
+            .carousel-nav-btn {
+                width: 42px;
+                height: 42px;
+                font-size: 20px;
+            }
+
+            .carousel-indicators-carousel {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials-carousel-wrapper {
+                gap: 12px;
+                padding: 0 8px;
+                width: 100%;
+            }
+
+            .testimonial-card-carousel {
+                padding: 18px;
+                min-height: 240px;
+            }
+
+            .testimonial-card-carousel .testimonial-text {
+                font-size: 12px;
+            }
+
+            .testimonial-card-carousel .testimonial-author {
+                font-size: 13px;
+            }
+
+            .carousel-nav-btn {
+                width: 38px;
+                height: 38px;
+                font-size: 18px;
+            }
+
+            .carousel-indicators-carousel {
+                gap: 6px;
+                margin-top: 16px;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .testimonial-card-hover {
+                padding: 24px;
+                min-height: 260px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .testimonial-card-hover {
+                padding: 20px;
+                min-height: 240px;
+            }
+
+            .testimonial-text {
+                font-size: 13px;
+                margin-bottom: 16px;
+            }
+
+            .testimonial-stars {
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials-grid {
+                gap: 16px;
+            }
+
+            .testimonial-card-hover {
+                padding: 18px;
+                min-height: 220px;
+            }
+
+            .testimonial-text {
+                font-size: 12px;
+            }
+
+            .testimonial-author {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .testimonials-single-carousel {
+                gap: 16px;
+            }
+
+            .testimonial-single-card {
+                min-height: 480px;
+            }
+
+            .testimonial-single-card .testimonial-image-section {
+                height: 300px;
+            }
+
+            .testimonial-single-card .testimonial-content {
+                padding: 28px;
+            }
+
+            .carousel-nav-btn {
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-single-carousel {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .testimonial-single-container {
+                width: 100%;
+                min-height: auto;
+            }
+
+            .testimonial-single-card {
+                flex-direction: row;
+            }
+
+            .testimonial-single-card .testimonial-image-section {
+                width: 45%;
+                height: 300px;
+            }
+
+            .testimonial-single-card .testimonial-content {
+                width: 55%;
+                padding: 24px;
+            }
+
+            .carousel-nav-btn {
+                width: 48px;
+                height: 48px;
+                font-size: 22px;
+            }
+
+            .carousel-indicators-single {
+                flex-direction: row;
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials-single-carousel {
+                gap: 12px;
+            }
+
+            .testimonial-single-card {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .testimonial-single-card .testimonial-image-section {
+                width: 100%;
+                height: 220px;
+            }
+
+            .testimonial-single-card .testimonial-content {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .testimonial-single-card .testimonial-text {
+                font-size: 14px;
+                margin-bottom: 16px;
+            }
+
+            .testimonial-single-card .testimonial-author {
+                font-size: 15px;
+            }
+
+            .carousel-nav-btn {
+                width: 44px;
+                height: 44px;
+                font-size: 20px;
+            }
+
+            .carousel-indicators-single {
+                gap: 8px;
+                margin-top: 16px;
+            }
+
+            .carousel-indicators-single .indicator.active {
+                width: 24px;
+            }
+        }
+
+        /* ABOUT SECTION */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, #E8DFF6 0%, #D4EDE4 100%);
+            border-radius: 12px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 24px;
+        }
+
+        .skill-column h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .skill-column ul {
+            list-style: none;
+        }
+
+        .skill-column li {
+            font-size: 13px;
+            color: var(--text);
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-column li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            border-radius: 16px;
+            padding: 60px 80px 20px 80px;
+            margin: 20px auto;
+            max-width: 1000px;
+            box-shadow: 0 10px 40px rgba(127, 119, 221, 0.2);
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 16px;
+            font-size: 32px;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 20px;
+            font-size: 18px;
+                font-weight: 700;
+        }
+
+        .cta-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group input {
+            padding: 14px 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            background: white;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .form-group input::placeholder {
+            color: #999;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group textarea {
+            padding: 14px 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            color: var(--text);
+            min-height: 120px;
+            resize: vertical;
+            font-weight: 500;
+        }
+
+        .form-submit {
+            grid-column: 1 / -1;
+            background: white;
+            color: var(--primary);
+            padding: 12px 32px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .form-submit:hover {
+            background: var(--light);
+            transform: translateY(-2px);
+        }
+
+        /* Google Form Container */
+        .google-form-container {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .google-form-container iframe {
+            display: block;
+            width: 100%;
+            height: 610px;
+            border-radius: 8px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 60px 40px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-section a {
+            display: block;
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 8px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 12px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-section,
+            .about-grid,
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .stats-grid,
+            .services-grid,
+            .testimonials-container {
+                grid-template-columns: 1fr;
+            }
+
+            .case-study,
+            .case-study.reverse {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .cta-form {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section {
+                padding: 40px 20px 20px;
+            }
+
+            .google-form-container {
+                padding: 8px;
+                max-width: 100%;
+                margin: 0 auto 32px;
+            }
+
+            .google-form-container iframe {
+                height: 760px !important;
+            }
+
+            nav {
+                position: fixed;
+                flex-wrap: nowrap;
+                padding: 14px 20px;
+                justify-content: space-between;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                background: white;
+                border-top: 1px solid var(--border);
+                box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+                padding: 8px 20px 20px;
+                max-height: calc(100vh - 64px);
+                overflow-y: auto;
+            }
+
+            .nav-menu.open {
+                display: flex;
+            }
+
+            nav a {
+                margin: 0;
+                padding: 14px 4px;
+                font-size: 15px;
+                width: 100%;
+                border-bottom: 1px solid var(--border);
+            }
+
+            nav a.active {
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-link-cta {
+                display: block;
+                background: var(--primary);
+                color: white;
+                text-align: center;
+                border-radius: 6px;
+                margin-top: 12px !important;
+                border-bottom: none;
+                font-weight: 600;
+            }
+
+            .nav-link-cta:hover {
+                color: white;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+        }
+
+        /* MODAL FOR TESTIMONIAL PROOF */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            margin: 10% auto;
+            padding: 0;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+            overflow: hidden;
+        }
+
+        .modal-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            color: white;
+            margin: 0;
+        }
+
+        .close {
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .modal-body {
+            padding: 24px;
+            text-align: center;
+        }
+
+        .proof-image {
+            width: 100%;
+            height: 400px;
+            background: var(--light);
+            border-radius: 6px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+        }
+
+        /* INDUSTRY SELECTOR MODAL */
+        .industry-modal {
+            display: none;
+            position: fixed;
+            z-index: 3000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            animation: fadeIn 0.3s;
+        }
+
+        .industry-modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .industry-modal-content {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 900px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .industry-modal-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .industry-modal-header h2 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .industry-modal-header p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .industry-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .industry-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 24px rgba(127, 119, 221, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .industry-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .industry-card h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+            color: var(--text);
+        }
+
+        .close-industry-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 32px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: color 0.3s;
+        }
+
+        .close-industry-modal:hover {
+            color: var(--text);
+        }
+
+        /* EXPERTISE AREAS - STRATEGIC PILLARS */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .expertise-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 36px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .expertise-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 12px 36px rgba(127, 119, 221, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .expertise-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #7F77DD;
+            margin-bottom: 12px;
+            opacity: 5;
+        }
+
+        .expertise-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .expertise-focus {
+            font-size: 14px;
+            color: var(--secondary);
+            font-weight: 500;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .expertise-skills {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .expertise-skills li {
+            font-size: 13px;
+            color: var(--text-secondary);
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .expertise-skills li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .expertise-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 24px;
+            }
+            
+            .expertise-card {
+                padding: 28px;
+            }
+            
+            .expertise-number {
+                font-size: 36px;
+            }
+        }
+
+        /* CORE SERVICES BREAKDOWN - IMPROVED DESIGN */
+        .services-breakdown {
+            padding: 80px 40px;
+            background: var(--light);
+        }
+
+        .services-subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 50px;
+            max-width: 600px;
+        }
+
+        .services-grid-new {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 12px 32px rgba(127, 119, 221, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .service-category {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .service-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .service-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .highlight {
+            display: inline-block;
+            background: var(--light);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .services-grid-new {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            
+            .service-card {
+                padding: 24px;
+            }
+            
+            .service-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .services-breakdown {
+                padding: 60px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-grid-new {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* CASE STUDY FILTERS */
+        .casestudy-filters {
+            display: flex;
+            gap: 12px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 1px solid var(--border);
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary);
+        }
+
+        .casestudy-filter-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .industry-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .casestudy-filter-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card {
+                min-width: calc(50% - 12px);
+                margin-right: 24px;
+                padding: 20px;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .testimonials-carousel-wrapper {
+                gap: 12px;
+            }
+
+            .testimonial-text {
+                font-size: 13px;
+            }
+
+            .testimonial-image-hover {
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonial-card {
+                min-width: 100%;
+                margin-right: 0;
+            }
+
+            .carousel-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 18px;
+            }
+
+            .testimonials-carousel-wrapper {
+                gap: 8px;
+            }
+
+            .carousel-indicators {
+                margin-top: 16px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .testimonial-card {
+                min-width: calc(33.333% - 16px);
+                margin-right: 24px;
+            }
+        }
+
+        /* ===== ENGAGEMENT ANIMATIONS ===== */
+        @keyframes heroFadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes heroFadeIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .status-badge {
+            animation: heroFadeInUp 0.7s ease-out both;
+        }
+
+        .hero-content h1 {
+            animation: heroFadeInUp 0.7s ease-out 0.1s both;
+        }
+
+        .hero-content > p,
+        .hero-content > div > p {
+            animation: heroFadeInUp 0.7s ease-out 0.2s both;
+        }
+
+        .hero-content .cta-buttons {
+            animation: heroFadeInUp 0.7s ease-out 0.3s both;
+        }
+
+        .hero-image {
+            animation: heroFadeIn 0.8s ease-out 0.2s both;
+        }
+
+        /* Reveal cards as they scroll into view */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal-up.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stat cards: subtle lift + glow on hover */
+        .stat-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 30px rgba(127, 119, 221, 0.16);
+            border-color: var(--primary);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .status-badge,
+            .hero-content h1,
+            .hero-content > p,
+            .hero-content > div > p,
+            .hero-content .cta-buttons,
+            .hero-image {
+                animation: none;
+            }
+
+            .reveal-up {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- INDUSTRY SELECTOR MODAL -->
+<div id="industryModal" class="industry-modal">
+    <div class="industry-modal-content" style="position: relative;">
+        <span class="close-industry-modal" onclick="closeIndustryModal()">&times;</span>
+        <div class="industry-modal-header">
+            <h2>Explore Success Stories by Industry</h2>
+            <p>Select your industry to see how I've helped similar companies scale</p>
+        </div>
+        <div class="industry-grid" id="industryGrid"></div>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">🚀 Growth Partner</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+    </button>
+    <div class="nav-menu" id="navMenu">
+        <a href="#header" class="nav-link active" data-section="header" onclick="scrollToSection('header'); return false;">Solutions</a>
+        <a href="#results" class="nav-link" data-section="results" onclick="scrollToSection('results'); return false;">Results</a>
+        <a href="#about" class="nav-link" data-section="about" onclick="scrollToSection('about'); return false;">About</a>
+        <a href="#expertise" class="nav-link" data-section="expertise" onclick="scrollToSection('expertise'); return false;">Expertise</a>
+        <a href="#services" class="nav-link" data-section="services" onclick="scrollToSection('services'); return false;">Services</a>
+        <a href="#testimonials" class="nav-link" data-section="testimonials" onclick="scrollToSection('testimonials'); return false;">Testimonials</a>
+        <a href="case-study.html" class="nav-link" data-section="case-study">Case Studies</a>
+        <a href="#contact" class="nav-link nav-link-cta" onclick="scrollToSection('contact'); return false;">Get Started</a>
+    </div>
+    <button class="nav-cta" onclick="scrollToSection('contact')">Get Started</button>
+</nav>
+
+<!-- HEADER / HERO SECTION -->
+<section id="header" style="background: #56518a;border-radius: 18px;">
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="status-badge">✓ Available for New Projects</div>
+            <h1 style="color: white;">Digital Growth Solutions for D2C, B2C & B2B</h1>
+            <p style="color: white;font-size: 18px;font-weight: 700;"> -- Turn Marketing Challenges Into Measurable Business Growth --</p>
+            <p style="color: white;">I build practical digital growth strategies across SEO, paid media, content, CRO, analytics and CRM, connecting marketing activity to the metrics that matter: qualified leads, customer acquisition, revenue and ROI.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary"onclick="reopenIndustryModal()">📈 View Results</button>
+                <button class="btn btn-secondary"onclick="scrollToSection('contact')">Book Consultation →</button>            
+            </div>
+        </div>
+        <div class="hero-image"><img src="assets/images/Photo copy11.png" alt="Hero banner showcasing digital marketing work"></div>
+    </div>
+</section>
+
+<!-- ACHIEVEMENTS STATS -->
+<section class="alt">
+    <h2>Proven Track Record</h2>
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">38+</div>
+            <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">450M+</div>
+            <div class="stat-label">Impressions Generated</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">1,340</div>
+            <div class="stat-label">Keywords Ranked #1-10</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">$320M+</div>
+            <div class="stat-label">Client Revenue Generated</div>
+        </div>
+    </div>
+</section>
+
+<!-- PROVEN RESULTS -->
+<section id="results">
+    <h2>Real Business Problems. Measurable Growth.</h2>
+    <p>Explore how I’ve solved different business growth challenges through strategy, execution and continuous optimization — turning marketing investment into measurable outcomes across D2C, B2C and B2B businesses.</p>
+
+    <!-- CASE STUDY FILTERS -->
+    <div class="casestudy-filters">
+        
+        <button class="filter-btn active" id="filterAllBtn" onclick="filterCaseStudies('all')">All Industries</button>
+        <button class="filter-btn" onclick="filterCaseStudies('Manufacturing')">Manufacturing</button>
+        <button class="filter-btn" onclick="filterCaseStudies('Automobile')">Automobile</button>
+        <button class="filter-btn" onclick="filterCaseStudies('Technology')">Technology</button>
+        <button class="filter-btn" onclick="filterCaseStudies('Healthcare')">Healthcare</button>
+        <button class="filter-btn" onclick="filterCaseStudies('Dental')">Dental</button>
+        <button class="filter-btn" onclick="filterCaseStudies('Finance')">Finance</button>
+        <button class="filter-btn" onclick="filterCaseStudies('E-commerce')">E-commerce</button>
+        <button class="filter-btn" onclick="filterCaseStudies('Travel')">Travel</button>
+        <button class="filter-btn" onclick="filterCaseStudies('Real Estate')">Real Estate</button>
+        <button class="filter-btn" onclick="filterCaseStudies('Retail')">Retail</button>
+        <button class="filter-btn" onclick="filterCaseStudies('Logistics')">Logistics</button>
+        <button class="filter-btn" onclick="filterCaseStudies('IT Repair')">IT Services</button>
+        <button class="filter-btn" onclick="filterCaseStudies('Professional Services')">Professional Services</button>
+        <button class="filter-btn" onclick="filterCaseStudies('Business Services')">Business Services</button>
+    </div>
+
+    <!-- FILTERED CASE STUDIES (populated from case-studies-data.json per industry) -->
+    <div id="filteredCaseStudies" style="display: none;">
+        <div class="category-carousel-wrapper">
+            <button class="carousel-nav-btn nav-left" onclick="scrollCategoryCarousel(-1)">❮</button>
+            <div class="category-carousel-container">
+                <div class="category-carousel-track" id="categoryCarouselTrack"></div>
+            </div>
+            <button class="carousel-nav-btn nav-right" onclick="scrollCategoryCarousel(1)">❯</button>
+        </div>
+    </div>
+
+    <!-- Shown when a filter matches no published case studies -->
+    <div id="noResultsMessage" class="no-results-message">
+        <div class="no-results-icon">🛠️</div>
+        <h3>Case studies for this industry are coming soon</h3>
+        <p>Meanwhile, here's a look at the growth work already published.</p>
+        <button class="btn btn-primary" onclick="document.getElementById('filterAllBtn').click()">View All Case Studies</button>
+    </div>
+
+    <!-- Default Case Studies (when no filter selected) -->
+    <div id="defaultCaseStudies">
+        <!-- Case Study 1 -->
+        <div class="case-study" data-industry="ecommerce" onclick="openCaseStudy(1, 'ecommerce')" style="cursor: pointer;">
+        <div class="case-study-image"><img src="assets/case_studies/Case Cards1.jpg" alt="Case Study Screenshot 1" style="border-radius: 18px;"></div>
+        <div class="case-study-content">
+            <span class="case-tag">D2C • Growth Strategy</span>
+            <h3>$800K → $3.2M ARR in 18 Months</h3>
+            <p>Health & wellness D2C brand was over-dependent on paid ads. Built integrated SEO + content + email strategy to reduce ad spend by 40% while growing revenue 4x.</p>
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-value">4x</div>
+                    <div class="result-label">ARR Growth</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">-40%</div>
+                    <div class="result-label">Ad Spend</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">68%</div>
+                    <div class="result-label">Organic Revenue</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Study 2 -->
+    <div class="case-study reverse" data-industry="ecommerce" onclick="openCaseStudy(2, 'ecommerce')" style="cursor: pointer;">
+        <div class="case-study-content">
+            <span class="case-tag">B2C • Lead Generation</span>
+            <h3>+285% Qualified Leads in 12 Months</h3>
+            <p>E-commerce retailer needed sustainable lead pipeline. Optimized website UX, launched Google & LinkedIn ads, built email nurture. Went from 12 → 44 qualified leads/week.</p>
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-value">+285%</div>
+                    <div class="result-label">Lead Growth</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">-48%</div>
+                    <div class="result-label">Cost Per Lead</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">44/week</div>
+                    <div class="result-label">Qualified Leads</div>
+                </div>
+            </div>
+        </div>
+        <div class="case-study-image"><img src="assets/case_studies/Case Cards2.jpg" alt="Case Study Screenshot 2" style="border-radius: 18px;"></div>
+    </div>
+
+    <!-- Case Study 3 -->
+    <div class="case-study" data-industry="saas" onclick="openCaseStudy(3, 'saas')" style="cursor: pointer;">
+        <div class="case-study-image"><img src="assets/case_studies/Case Cards3.jpg" alt="Case Study Screenshot 3" style="border-radius: 18px;"></div>
+        <div class="case-study-content">
+            <span class="case-tag">B2B • Enterprise Growth</span>
+            <h3>$1.2M → $4.1M ARR in 14 Months</h3>
+            <p>SaaS platform had great product, weak go-to-market. Built full GTM strategy: SEO foundation, thought leadership content, LinkedIn sales campaigns, sales enablement.</p>
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-value">3.4x</div>
+                    <div class="result-label">ARR Growth</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">156</div>
+                    <div class="result-label">SQL/Month</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">32%</div>
+                    <div class="result-label">Win Rate</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- ABOUT ME -->
+<section id="about" class="alt" style="border-radius: 18px;">
+    <h2>About Me</h2>
+    <div class="about-grid">
+                <div class="about-image"><img src="assets/images/Services 4.jpg" alt="About Photo" style="border-radius: 18px;"></div>
+        
+        <div>
+            <p style="font-size: 17px; font-weight: 700;color: #7F77DD;line-height: 2;"><strong>11+ Years of Turning Digital Marketing Into Business Growth</strong></p>
+            <p>Over 11+ years, I’ve worked across D2C, B2C and B2B businesses, helping companies address challenges such as inconsistent lead generation, rising acquisition costs, low organic visibility, weak conversion rates and disconnected marketing data.</p>
+            <p style="margin-top: 20px;">My approach goes beyond managing individual channels. I look at the complete growth journey — business objectives → audience → acquisition → conversion → retention → measurement — and build a practical strategy around it.</p>
+            <p style="margin-top: 20px;">From startups looking to establish demand to established businesses looking to scale efficiently, my focus remains the same: find what is limiting growth, fix it, measure the impact and continuously improve performance.</p>
+            <div class="skills-grid" style="margin-top: 32px;">
+                <div class="skill-column">
+                    <h4>Core Expertise</h4>
+                    <ul>
+                        <li>Growth Strategy</li>
+                        <li>SEO & Content</li>
+                        <li>Performance Marketing</li>
+                        <li>Conversion Optimization</li>
+                        <li>Brand Strategy</li>
+                    </ul>
+                </div>
+                <div class="skill-column">
+                    <h4>Latest & Trending</h4>
+                    <ul>
+                        <li>AI-Powered Marketing</li>
+                        <li>GA4 & Advanced Analytics</li>
+                        <li>Email Automation</li>
+                        <li>Creator Marketing</li>
+                        <li>CRM Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERTISE AREAS -->
+<section id="expertise">
+    <h2 style="line-height: 0;">My Approach to Growth</h2>
+    <p>I help companies grow through three strategic pillars: acquiring customers efficiently, converting them at higher rates, and retaining them for lifetime value.</p>
+    
+    <div class="expertise-grid">
+        <!-- Pillar 1: Acquisition -->
+        <div class="expertise-card">
+            <div class="expertise-number" >01</div>
+            <h3>Customer Acquisition</h3>
+            <p class="expertise-focus">Building efficient channels to attract your ideal customers</p>
+            <ul class="expertise-skills">
+                <li>Performance Marketing (Google Ads, LinkedIn, Meta)</li>
+                <li>SEO & Organic Growth</li>
+                <li>Content Strategy & Thought Leadership</li>
+                <li>Lead Generation & Pipeline Building</li>
+            </ul>
+        </div>
+
+        <!-- Pillar 2: Conversion -->
+        <div class="expertise-card">
+            <div class="expertise-number">02</div>
+            <h3>Conversion Optimization</h3>
+            <p class="expertise-focus">Maximize the revenue potential of every visitor</p>
+            <ul class="expertise-skills">
+                <li>Website UX & Conversion Rate Testing</li>
+                <li>Landing Page Design & Strategy</li>
+                <li>Funnel Analysis & Optimization</li>
+                <li>A/B Testing & Data-Driven Decisions</li>
+            </ul>
+        </div>
+
+        <!-- Pillar 3: Retention -->
+        <div class="expertise-card">
+            <div class="expertise-number">03</div>
+            <h3>Customer Retention</h3>
+            <p class="expertise-focus">Building loyalty and long-term customer value</p>
+            <ul class="expertise-skills">
+                <li>Email Marketing & Automation</li>
+                <li>Social Community & Engagement</li>
+                <li>CRM & Marketing Technology Integration</li>
+                <li>Analytics, Reporting & Insights</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CORE SERVICES BREAKDOWN -->
+<section id="services" class="services-breakdown alt" style="border-radius: 18px;>
+    <h2 style="line-height: 0;">Core Services Breakdown</h2>
+    <p class="services-subtitle" style="font-size: 18px; line-height: 3;">Eight Growth Capabilities Built Around Your Business Goals</p>
+    
+    <div class="services-grid-new">
+        <!-- Service 1: Consulting Services -->
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-chess "></i>
+            </div>
+            <h3>Consulting Services</h3>
+            <p class="service-category">Strategy Formulation</p>
+            <p class="service-description">
+                bridge the gap between high-level business goals and technical execution by auditing your current presence, identifying growth opportunities, and building a structured, data-driven roadmap.
+            </p>
+            <div class="service-highlights">
+                <span class="highlight">Insight & Auditing</span>
+                <span class="highlight">System Frameworks</span>
+            </div>
+        </div>
+        
+        <!-- Service 2: Performance Marketing -->
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Performance Marketing</h3>
+            <p class="service-category">Paid Channels</p>
+            <p class="service-description">
+                Google Ads, LinkedIn, Facebook, Instagram campaigns — paid channels optimized for ROI. From audience targeting to bid management to continuous optimization.
+            </p>
+            <div class="service-highlights">
+                <span class="highlight">Audience Targeting</span>
+                <span class="highlight">ROI Optimization</span>
+            </div>
+        </div>
+
+        <!-- Service 3: SEO & Organic Growth -->
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <h3>SEO & Organic Growth</h3>
+            <p class="service-category">Organic Channels</p>
+            <p class="service-description">
+                Technical SEO, keyword research, content strategy, link building — capture high-intent search traffic and build long-term authority.
+            </p>
+            <div class="service-highlights">
+                <span class="highlight">Keyword Research</span>
+                <span class="highlight">Link Building</span>
+            </div>
+        </div>
+
+        <!-- Service 4: Content & Thought Leadership -->
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-pen-fancy"></i>
+            </div>
+            <h3>Content & Leadership</h3>
+            <p class="service-category">Brand Building</p>
+            <p class="service-description">
+                Blog strategy, whitepapers, case studies, executive positioning — build credibility and attract customers through valuable content.
+            </p>
+            <div class="service-highlights">
+                <span class="highlight">Content Strategy</span>
+                <span class="highlight">Case Studies</span>
+            </div>
+        </div>
+
+        <!-- Service 5: Conversion & CRO -->
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-bullseye"></i>
+                
+            </div>
+            <h3>Conversion & CRO</h3>
+            <p class="service-category">Revenue Optimization</p>
+            <p class="service-description">
+                Website optimization, A/B testing, landing pages, funnel analysis — double your revenue per visitor through systematic optimization.
+            </p>
+            <div class="service-highlights">
+                <span class="highlight">A/B Testing</span>
+                <span class="highlight">Landing Pages</span>
+            </div>
+        </div>
+
+        <!-- Service 6: Email & Marketing Automation -->
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email & Automation</h3>
+            <p class="service-category">Customer Retention</p>
+            <p class="service-description">
+                Email campaigns, segmentation, automation workflows, nurture sequences — turn leads into customers and customers into advocates.
+            </p>
+            <div class="service-highlights">
+                <span class="highlight">Email Campaigns</span>
+                <span class="highlight">Automation</span>
+            </div>
+        </div>
+
+        <!-- Service 7: Social & Community -->
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <h3>Social & Community</h3>
+            <p class="service-category">Audience Engagement</p>
+            <p class="service-description">
+                Strategy, content, community management, influencer partnerships — build an engaged audience that becomes your brand advocates.
+            </p>
+            <div class="service-highlights">
+                <span class="highlight">Community Management</span>
+                <span class="highlight">Partnerships</span>
+            </div>
+        </div>
+
+        <!-- Service 8: CRM & Martech Integration -->
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-database"></i>
+            </div>
+            <h3>CRM & Martech</h3>
+            <p class="service-category">Systems Integration</p>
+            <p class="service-description">
+                CRM setup, marketing automation, data integration, process automation — align marketing and sales through integrated systems.
+            </p>
+            <div class="service-highlights">
+                <span class="highlight">CRM Setup</span>
+                <span class="highlight">Data Integration</span>
+            </div>
+        </div>
+
+        <!-- Service 9: Analytics & Reporting -->
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <h3>Analytics & Reporting</h3>
+            <p class="service-category">Data Intelligence</p>
+            <p class="service-description">
+                GA4 setup, custom dashboards, KPI tracking, insights — measure what matters and optimize continuously based on data.
+            </p>
+            <div class="service-highlights">
+                <span class="highlight">GA4 Setup</span>
+                <span class="highlight">KPI Tracking</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CLIENT TESTIMONIALS -->
+<section id="testimonials">
+    <h2 style="line-height: 0;">What Clients Say</h2>
+    <p style="line-height: 1;">Trusted by founders and marketing leaders at growth-focused companies.</p>
+    
+    <div class="testimonials-carousel-wrapper">
+        <!-- Left Navigation Button -->
+        <button class="carousel-nav-btn nav-left" onclick="scrollTestimonials(-1)" id="prevBtn">❮</button>
+        
+        <!-- Carousel Container -->
+        <div class="testimonials-carousel-container">
+            <div class="testimonials-carousel-track" id="testimonialsTrack">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card-carousel">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">"Anbarasan helped us increase qualified leads by 60% within three months and reduce CPL by 21%, while organic traffic grew 40% over six months. His data-driven approach across paid media, SEO and lead generation helped turn digital marketing into a more measurable growth channel for our business"</div>
+                    <div class="testimonial-author">Jeo Maijo</div>
+                    <div class="testimonial-role">CEO, George Maijo</div>
+                    <!-- Hover Image Popup -->
+                    <div class="image-popup-carousel">
+                        <img src="/assets/screenshots/review1.jpg" alt="Priya Kapoor Proof">
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card-carousel">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">"He brought structure and a strong performance focus to our digital marketing. His work across SEO, paid campaigns, landing pages and lead generation helped us build a more consistent approach to generating relevant business enquiries across our target markets."</div>
+                    <div class="testimonial-author">Gopi Krishan</div>
+                    <div class="testimonial-role">SaaS Platform, Redington</div>
+                    <!-- Hover Image Popup -->
+                    <div class="image-popup-carousel">
+                        <img src="/assets/screenshots/review1.jpg" alt="Rajesh Singh Proof">
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card-carousel">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">"Lead generation strategy transformed our B2B pipeline. Cost per qualified lead dropped 62% while lead volume tripled. Clear ROI on every dollar spent."</div>
+                    <div class="testimonial-author">Meera Choudhury</div>
+                    <div class="testimonial-role">VP Marketing, ProConnect</div>
+                    <!-- Hover Image Popup -->
+                    <div class="image-popup-carousel">
+                        <img src="/assets/screenshots/review1.jpg" alt="Meera Choudhury Proof">
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card-carousel">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">"Anbarasan helped us build a measurable patient acquisition strategy that generated 1,000+ leads per month at approximately $4 CPL. His combination of Google, Meta, landing-page optimization and conversion tracking made our digital campaigns more focused and performance-driven.”"</div>
+                    <div class="testimonial-author">Dr Richard Marasco</div>
+                    <div class="testimonial-role">CMO, East Bay Dental Care</div>
+                    <!-- Hover Image Popup -->
+                    <div class="image-popup-carousel">
+                        <img src="/assets/screenshots/review1.jpg" alt="Aditya Sharma Proof">
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card-carousel">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">"Strategic thinking + execution excellence. Developed our entire go-to-market strategy. ARR grew from $500K to $2.2M in 15 months. Outstanding partnership."</div>
+                    <div class="testimonial-author">Vikram Patel</div>
+                    <div class="testimonial-role">CEO, B2B SaaS</div>
+                    <!-- Hover Image Popup -->
+                    <div class="image-popup-carousel">
+                        <img src="/assets/screenshots/review1.jpg" alt="Vikram Patel Proof">
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card-carousel">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">"Not just a consultant, a true growth partner. Thinks like a business owner. Focused on impact, not deliverables. Would highly recommend to any founder."</div>
+                    <div class="testimonial-author">Neha Gupta</div>
+                    <div class="testimonial-role">Founder, Health Tech Startup</div>
+                    <!-- Hover Image Popup -->
+                    <div class="image-popup-carousel">
+                        <img src="/assets/screenshots/review1.jpg" alt="Neha Gupta Proof">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Navigation Button -->
+        <button class="carousel-nav-btn nav-right" onclick="scrollTestimonials(1)" id="nextBtn">❯</button>
+    </div>
+    
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators-carousel" id="carouselIndicators"></div>
+</section>
+
+<!-- MODALS FOR TESTIMONIAL PROOFS -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Priya Kapoor - Digital Commerce</h3>
+            <span class="close" onclick="closeModal(1)">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p><strong>Results Proof:</strong> 2K → 25K Monthly Organic Visitors</p>
+            <div class="proof-image">[Proof Screenshot - Traffic Growth]</div>
+            <p style="margin-top: 16px; color: var(--text-secondary);">Click the screenshot image to view full proof of organic traffic growth and SEO results.</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Rajesh Singh - SaaS Platform</h3>
+            <span class="close" onclick="closeModal(2)">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p><strong>Results Proof:</strong> 8x Revenue Growth in 18 Months</p>
+            <div class="proof-image">[Proof Screenshot - Revenue Growth]</div>
+            <p style="margin-top: 16px; color: var(--text-secondary);">Dashboard showing revenue growth from implementation to 18-month mark.</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Meera Choudhury - Enterprise SaaS</h3>
+            <span class="close" onclick="closeModal(3)">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p><strong>Results Proof:</strong> -62% CPL, +3x Lead Volume</p>
+            <div class="proof-image">[Proof Screenshot - Lead Metrics]</div>
+            <p style="margin-top: 16px; color: var(--text-secondary);">Lead generation performance showing cost reduction and volume increase.</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Aditya Sharma - D2C Brand</h3>
+            <span class="close" onclick="closeModal(4)">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p><strong>Results Proof:</strong> -45% Ad Spend, Higher Conversions</p>
+            <div class="proof-image">[Proof Screenshot - Ad Performance]</div>
+            <p style="margin-top: 16px; color: var(--text-secondary);">Ad account performance showing spend reduction with improved conversion rates.</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Vikram Patel - B2B SaaS</h3>
+            <span class="close" onclick="closeModal(5)">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p><strong>Results Proof:</strong> $500K → $2.2M ARR in 15 Months</p>
+            <div class="proof-image">[Proof Screenshot - ARR Growth]</div>
+            <p style="margin-top: 16px; color: var(--text-secondary);">Financial dashboard showing ARR progression over 15-month engagement.</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Neha Gupta - Health Tech Startup</h3>
+            <span class="close" onclick="closeModal(6)">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p><strong>Partnership Results:</strong> Full Growth Strategy Implementation</p>
+            <div class="proof-image">[Proof Screenshot - Overall Growth]</div>
+            <p style="margin-top: 16px; color: var(--text-secondary);">Comprehensive results showing multiple metrics and growth indicators.</p>
+        </div>
+    </div>
+</div>
+
+<!-- CTA SECTION -->
+<section id="contact" class="cta-section">
+    <h2>Ready to Scale Your Business?</h2>
+    <p>Let's discuss your growth goals, challenges, and what's possible. No fluff, just strategy and execution.</p>
+    
+    <!-- Google Form -->
+    <div class="google-form-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdN1gEvFPO_wWvgsfNj7tn8TyaePH8CUz-qq9a_jbDR_BLCNA/viewform?embedded=true" width="100%" height="610" frameborder="0" marginheight="0" marginwidth="0" style="border: none; border-radius: 8px;">Loading…</iframe>
+    </div>
+
+    <div style="margin-top: 32px; font-size: 14px; color: rgba(255,255,255,0.9);">
+        <p>Or reach out directly:</p>
+        <p>💬 <a href="tel:+918122080143" style="color: white; text-decoration: none;">WhatsApp/Call</a> | 📧 <a href="mailto:anbupartneritech@gmail.com" style="color: white; text-decoration: none;">Email</a> | <a href="#" onclick="reopenIndustryModal()" style="color: white; text-decoration: none;">Explore Industries</a></p>
+    </div>
+</section>
+
+<script>
+// Testimonials Carousel with Auto-Scrolling Loop
+let currentScrollPosition = 0;
+const cardWidth = 33.333; // Percentage width of each card
+const totalCards = 6;
+const maxSlides = totalCards - 3; // 6 cards - 3 visible = 3 possible positions
+let autoScrollInterval;
+const AUTO_SCROLL_INTERVAL = 4000; // Auto scroll every 4 seconds
+let isAutoScrolling = true;
+
+function initializeCarousel() {
+    createIndicators();
+    updateCarousel();
+    startAutoScroll();
+}
+
+function createIndicators() {
+    const container = document.getElementById('carouselIndicators');
+    const totalSlides = totalCards - 2; // Show 3 cards at a time, so max slides
+    
+    for (let i = 0; i < totalSlides; i++) {
+        const indicator = document.createElement('div');
+        indicator.className = `indicator ${i === 0 ? 'active' : ''}`;
+        indicator.onclick = () => {
+            goToSlide(i);
+            pauseAutoScroll();
+            resumeAutoScrollAfterDelay();
+        };
+        container.appendChild(indicator);
+    }
+}
+
+function scrollTestimonials(direction) {
+    const newPosition = currentScrollPosition + direction;
+    
+    if (newPosition < 0) {
+        // Loop to end
+        currentScrollPosition = maxSlides;
+    } else if (newPosition > maxSlides) {
+        // Loop to start
+        currentScrollPosition = 0;
+    } else {
+        currentScrollPosition = newPosition;
+    }
+    
+    updateCarousel();
+    
+    // Pause auto-scroll on manual interaction
+    pauseAutoScroll();
+    resumeAutoScrollAfterDelay();
+}
+
+function goToSlide(index) {
+    currentScrollPosition = index;
+    updateCarousel();
+}
+
+function updateCarousel() {
+    const track = document.getElementById('testimonialsTrack');
+    const offset = -currentScrollPosition * (cardWidth + 2); // cardWidth + gap percentage
+    track.style.transform = `translateX(${offset}%)`;
+    
+    // Update indicators
+    const indicators = document.querySelectorAll('.carousel-indicators-carousel .indicator');
+    indicators.forEach((ind, idx) => {
+        ind.classList.remove('active');
+        if (idx === currentScrollPosition) ind.classList.add('active');
+    });
+    
+    // Update button states (but allow looping)
+    // Don't disable buttons - they work in a loop now
+}
+
+function autoScroll() {
+    currentScrollPosition++;
+    
+    // Loop back to start
+    if (currentScrollPosition > maxSlides) {
+        currentScrollPosition = 0;
+    }
+    
+    updateCarousel();
+}
+
+function startAutoScroll() {
+    if (isAutoScrolling) {
+        autoScrollInterval = setInterval(autoScroll, AUTO_SCROLL_INTERVAL);
+    }
+}
+
+function pauseAutoScroll() {
+    clearInterval(autoScrollInterval);
+}
+
+function resumeAutoScrollAfterDelay() {
+    // Resume auto-scroll after 8 seconds of inactivity
+    setTimeout(() => {
+        startAutoScroll();
+    }, AUTO_SCROLL_INTERVAL * 2);
+}
+
+// Pause on hover
+const carouselContainer = document.querySelector('.testimonials-carousel-container');
+if (carouselContainer) {
+    carouselContainer.addEventListener('mouseenter', () => {
+        pauseAutoScroll();
+    });
+    
+    carouselContainer.addEventListener('mouseleave', () => {
+        startAutoScroll();
+    });
+}
+
+// Pause on button click and resume after delay
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+        pauseAutoScroll();
+        resumeAutoScrollAfterDelay();
+    });
+}
+
+if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+        pauseAutoScroll();
+        resumeAutoScrollAfterDelay();
+    });
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', initializeCarousel);
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        scrollTestimonials(-1);
+    }
+    if (e.key === 'ArrowRight') {
+        scrollTestimonials(1);
+    }
+});
+
+// Pause auto-scroll when user is active on the page
+document.addEventListener('mousemove', () => {
+    // Optional: can be used to track user activity
+});
+
+// Resume auto-scroll when page regains focus
+window.addEventListener('focus', () => {
+    startAutoScroll();
+});
+
+// Pause auto-scroll when page loses focus
+window.addEventListener('blur', () => {
+    pauseAutoScroll();
+});
+
+// Image Popup Modal Functions
+function openImageModal(imageSrc, clientName, clientRole) {
+    const modal = document.getElementById('imagePopupModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalName = document.getElementById('modalName');
+    const modalRole = document.getElementById('modalRole');
+    
+    modalImage.src = imageSrc;
+    modalName.textContent = clientName;
+    modalRole.textContent = clientRole;
+    modal.classList.add('active');
+    
+    // Prevent scrolling
+    document.body.style.overflow = 'hidden';
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imagePopupModal');
+    modal.classList.remove('active');
+    
+    // Restore scrolling
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('imagePopupModal');
+    
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeImageModal();
+            }
+        });
+    }
+    
+    // Add click listeners to all image popups
+    const imagePopups = document.querySelectorAll('.image-popup-carousel');
+    imagePopups.forEach((popup, index) => {
+        const card = popup.closest('.testimonial-card-carousel');
+        const author = card.querySelector('.testimonial-author').textContent;
+        const role = card.querySelector('.testimonial-role').textContent;
+        const img = popup.querySelector('img');
+        
+        popup.addEventListener('click', () => {
+            openImageModal(img.src, author, role);
+        });
+    });
+});
+
+// Close modal on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeImageModal();
+    }
+});
+
+// Case Study Filtering Functions
+// Open case study in new page
+function openCaseStudy(id, category) {
+    window.location.href = `case-study.html?id=${id}&category=${category}`;
+}
+
+// Full case study library (loaded from case-study.html's data source)
+let allCaseStudiesData = null;
+let caseStudiesDataPromise = null;
+
+function loadAllCaseStudiesData() {
+    if (!caseStudiesDataPromise) {
+        caseStudiesDataPromise = fetch('case-studies-data.json')
+            .then(res => res.json())
+            .then(data => { allCaseStudiesData = data; return data; })
+            .catch(err => {
+                console.error('Could not load case studies data', err);
+                allCaseStudiesData = [];
+                return [];
+            });
+    }
+    return caseStudiesDataPromise;
+}
+
+function renderCategoryCarousel(industry, studies) {
+    const track = document.getElementById('categoryCarouselTrack');
+    const filteredWrap = document.getElementById('filteredCaseStudies');
+    const noResultsMessage = document.getElementById('noResultsMessage');
+    const container = document.querySelector('.category-carousel-container');
+
+    if (!studies.length) {
+        filteredWrap.style.display = 'none';
+        noResultsMessage.style.display = 'block';
+        return;
+    }
+
+    track.innerHTML = studies.map(cs => `
+        <div class="category-case-card" onclick="openCaseStudy(${cs.id}, '${industry}')">
+            <div class="category-case-client">📍 ${cs.client} &middot; ${cs.industry}</div>
+            <h4>${cs.title}</h4>
+            <p class="category-case-desc">${cs.description}</p>
+            <div class="category-case-tags">
+                ${cs.results.slice(0, 3).map(r => `<span class="category-case-tag">${r}</span>`).join('')}
+            </div>
+        </div>
+    `).join('');
+
+    if (container) container.scrollLeft = 0;
+    filteredWrap.style.display = 'block';
+    noResultsMessage.style.display = 'none';
+
+    if (typeof revealOnScroll === 'function') {
+        revealOnScroll(track.querySelectorAll('.category-case-card'));
+    }
+}
+
+function scrollCategoryCarousel(direction) {
+    const container = document.querySelector('.category-carousel-container');
+    if (!container) return;
+    const card = container.querySelector('.category-case-card');
+    const step = card ? card.offsetWidth + 24 : 360;
+    container.scrollBy({ left: direction * step, behavior: 'smooth' });
+}
+
+async function filterCaseStudies(industry) {
+    // Update active button
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.classList.remove('active');
+    });
+    if (event && event.target) {
+        event.target.classList.add('active');
+    }
+
+    const defaultCaseStudies = document.getElementById('defaultCaseStudies');
+    const filteredCaseStudies = document.getElementById('filteredCaseStudies');
+    const noResultsMessage = document.getElementById('noResultsMessage');
+
+    if (industry === 'all') {
+        defaultCaseStudies.style.display = '';
+        filteredCaseStudies.style.display = 'none';
+        noResultsMessage.style.display = 'none';
+
+        // Update URL
+        window.history.pushState(null, '', window.location.pathname);
+        return;
+    }
+
+    // Show clients for this industry, pulled live from the full case study library
+    defaultCaseStudies.style.display = 'none';
+
+    const data = allCaseStudiesData || await loadAllCaseStudiesData();
+    const matches = data.filter(cs => cs.industry.toLowerCase().includes(industry.toLowerCase()));
+
+    renderCategoryCarousel(industry, matches);
+
+    // Update URL
+    const slug = industry.toLowerCase().replace(/\s+/g, '-');
+    const url = `${window.location.origin}${window.location.pathname}#casestudy/${slug}`;
+    window.history.pushState({ industry: industry }, `Case Studies - ${industry}`, url);
+}
+
+// Add fade-in animation style
+document.addEventListener('DOMContentLoaded', () => {
+    if (!document.getElementById('fadeInStyle')) {
+        const style = document.createElement('style');
+        style.id = 'fadeInStyle';
+        style.innerHTML = `@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }`;
+        document.head.appendChild(style);
+    }
+    
+    // Handle URL-based filtering on page load
+    const hash = window.location.hash;
+    if (hash.includes('casestudy/')) {
+        const slug = hash.split('/')[1];
+        const filterBtn = Array.from(document.querySelectorAll('.filter-btn')).find(btn => {
+            const match = btn.getAttribute('onclick').match(/filterCaseStudies\('([^']*)'\)/);
+            const btnSlug = match ? match[1].toLowerCase().replace(/\s+/g, '-') : '';
+            return btnSlug === slug;
+        });
+        if (filterBtn) {
+            filterBtn.click();
+        }
+    }
+});
+
+// Industry Selector Popup Functions
+function openIndustryPopup() {
+    const modal = document.getElementById('industryPopupModal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeIndustryPopup() {
+    const modal = document.getElementById('industryPopupModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function selectIndustry(industry) {
+    closeIndustryPopup();
+    
+    // Call the filter function
+    filterCaseStudies(industry);
+    
+    // Scroll to results
+    setTimeout(() => {
+        const resultsSection = document.getElementById('results');
+        if (resultsSection) {
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, 300);
+}
+
+// Close industry popup when clicking outside
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('industryPopupModal');
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeIndustryPopup();
+            }
+        });
+    }
+});
+
+// Close on Escape
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeIndustryPopup();
+    }
+});
+</script>
+
+<!-- INDUSTRY SELECTOR POPUP -->
+<div id="industryPopupModal" class="industry-popup-modal">
+    <div class="industry-popup-content">
+        <div class="industry-popup-header">
+            <h2>Select Your Industry</h2>
+            <p>View our success stories in your sector</p>
+            <button class="industry-popup-close" onclick="closeIndustryPopup()">✕</button>
+        </div>
+        <div class="industry-popup-grid">
+            <button class="industry-option" onclick="selectIndustry('education')">
+                <div class="industry-icon">🎓</div>
+                <div class="industry-name">Education</div>
+            </button>
+            <button class="industry-option" onclick="selectIndustry('dental')">
+                <div class="industry-icon">🦷</div>
+                <div class="industry-name">Dental</div>
+            </button>
+            <button class="industry-option" onclick="selectIndustry('healthcare')">
+                <div class="industry-icon">⚕️</div>
+                <div class="industry-name">Healthcare</div>
+            </button>
+            <button class="industry-option" onclick="selectIndustry('ecommerce')">
+                <div class="industry-icon">🛍️</div>
+                <div class="industry-name">E-Commerce</div>
+            </button>
+            <button class="industry-option" onclick="selectIndustry('saas')">
+                <div class="industry-icon">💻</div>
+                <div class="industry-name">SaaS</div>
+            </button>
+            <button class="industry-option" onclick="selectIndustry('finance')">
+                <div class="industry-icon">💰</div>
+                <div class="industry-name">Finance</div>
+            </button>
+            <button class="industry-option" onclick="selectIndustry('hospitality')">
+                <div class="industry-icon">🏨</div>
+                <div class="industry-name">Hospitality</div>
+            </button>
+            <button class="industry-option" onclick="selectIndustry('realtor')">
+                <div class="industry-icon">🏠</div>
+                <div class="industry-name">Real Estate</div>
+            </button>
+        </div>
+        <div class="industry-popup-footer">
+            <p>Not sure? <a href="#results" onclick="closeIndustryPopup(); scrollToSection('results'); return false;">Explore all case studies</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- IMAGE POPUP MODAL -->
+<div id="imagePopupModal" class="image-popup-modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeImageModal()">✕</button>
+        <img id="modalImage" class="modal-image" src="" alt="Testimonial Proof">
+        <div class="modal-info">
+            <h3 id="modalName">Client Name</h3>
+            <p id="modalRole">Role, Company</p>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer style="border-radius: 18px 18px 0px 0px;">
+    <div class="footer-content" >
+        <div class="footer-section" >
+            <h4>About</h4>
+            <a href="#about" onclick="scrollToSection('about'); return false;">About Me</a>
+            <a href="#results" onclick="scrollToSection('results'); return false;">My Work</a>
+            <a href="#testimonials" onclick="scrollToSection('testimonials'); return false;">Testimonials</a>
+            <a href="#">Blog</a>
+        </div>
+        <div class="footer-section">
+            <h4>Services</h4>
+            <a href="#services" onclick="scrollToSection('services'); return false;">Growth Strategy</a>
+            <a href="#services" onclick="scrollToSection('services'); return false;">SEO Services</a>
+            <a href="#services" onclick="scrollToSection('services'); return false;">Performance Marketing</a>
+            <a href="#services" onclick="scrollToSection('services'); return false;">CRO & Analytics</a>
+        </div>
+        <div class="footer-section">
+            <h4>Navigation</h4>
+            <a href="#header" onclick="scrollToSection('header'); return false;">Solutions</a>
+            <a href="#results" onclick="scrollToSection('results'); return false;">Proven Results</a>
+            <a href="#expertise" onclick="scrollToSection('services'); return false;">My Expertise</a>
+            <a href="#services" onclick="scrollToSection('services'); return false;">Core Services</a>
+            <a href="#contact" onclick="scrollToSection('contact'); return false;">Get Started</a>
+        </div>
+        <div class="footer-section">
+            <h4>Hire Me</h4>
+            <a href="#contact" onclick="scrollToSection('contact'); return false;">Book Consultation</a>
+            <a href="mailto:anbupartneritech@gmail.com">Email Me</a>
+            <a href="https://wa.me/918122080143">WhatsApp</a>
+            <a href="tel:+918122080143">Call</a>
+            <a href="assets/document/Anbarasan Digital Markering Sep v3.pdf">Resume</a>
+            
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Digital Growth Partner. All rights reserved. | Helping D2C, B2C & B2B companies scale through data-driven marketing strategies.</p>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function scrollToSection(id) {
+    const element = document.getElementById(id);
+    if (element) {
+        // Add offset for fixed navigation (80px)
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - 80;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+
+        // Reflect the section in the URL without jumping the scroll position
+        const url = `${window.location.pathname}${window.location.search}#${id}`;
+        window.history.pushState(null, '', url);
+
+        // Update navigation after scroll completes
+        setTimeout(() => {
+            updateActiveNav(id);
+        }, 500);
+    }
+}
+
+// Update active navigation link based on scroll position
+function updateActiveNav(activeSection) {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('data-section') === activeSection) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Mobile navigation menu
+function toggleMobileNav() {
+    const menu = document.getElementById('navMenu');
+    const toggle = document.getElementById('navToggle');
+    const isOpen = menu.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+
+function closeMobileNav() {
+    const menu = document.getElementById('navMenu');
+    const toggle = document.getElementById('navToggle');
+    menu.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+}
+
+// Close the mobile menu after picking a link, on outside click, or on resize back to desktop
+document.getElementById('navMenu').addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+        closeMobileNav();
+    }
+});
+
+document.addEventListener('click', (e) => {
+    const nav = document.querySelector('nav');
+    if (nav && !nav.contains(e.target)) {
+        closeMobileNav();
+    }
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        closeMobileNav();
+    }
+});
+
+// Detect scroll position and update active nav
+window.addEventListener('scroll', function() {
+    const sections = ['header', 'results', 'about', 'expertise', 'services', 'testimonials', 'contact'];
+    let currentSection = 'header';
+    
+    for (let section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+            const rect = element.getBoundingClientRect();
+            const elementTop = rect.top;
+            const elementHeight = rect.height;
+            
+            // Check if section is currently visible in viewport
+            // Highlight when section top is within 150px from top of viewport
+            if (elementTop <= 150 && elementTop + elementHeight > 150) {
+                currentSection = section;
+                break;  // Stop checking, found the current section
+            }
+        }
+    }
+    
+    updateActiveNav(currentSection);
+});
+
+function openModal(num) {
+    document.getElementById('modal' + num).style.display = 'block';
+}
+
+function closeModal(num) {
+    document.getElementById('modal' + num).style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+    }
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+    alert('Thank you for reaching out! We\'ll get back to you shortly.');
+    event.target.reset();
+}
+
+// Initialize industry modal on page load
+window.addEventListener('load', function() {
+    setTimeout(() => {
+        initializeIndustryModal();
+        checkURLAndShowCaseStudy();
+    }, 500);
+});
+
+// Initialize Industry Modal
+function initializeIndustryModal() {
+    const modal = document.getElementById('industryModal');
+    const hasVisited = localStorage.getItem('industryModalShown');
+    
+    if (!hasVisited) {
+        modal.classList.add('show');
+        renderIndustryCards();
+        localStorage.setItem('industryModalShown', 'true');
+    }
+}
+
+// Render Industry Cards
+function renderIndustryCards() {
+    const grid = document.getElementById('industryGrid');
+    grid.innerHTML = '';
+    
+    Object.keys(industryData).forEach(key => {
+        const industry = industryData[key];
+        const card = document.createElement('div');
+        card.className = 'industry-card';
+        card.innerHTML = `
+            <div class="industry-icon">${industry.icon}</div>
+            <h3>${industry.name}</h3>
+        `;
+        card.addEventListener('click', () => {
+            showCaseStudiesForIndustry(key);
+            closeIndustryModal();
+        });
+        grid.appendChild(card);
+    });
+}
+
+// Show case studies for selected industry (from the industry-picker popup)
+// Reuses the same filterCaseStudies()/carousel the Results section buttons use,
+// instead of writing placeholder content into the shared #filteredCaseStudies element.
+function showCaseStudiesForIndustry(industryKey) {
+    const categoryMap = {
+        education: 'Education',
+        dental: 'Dental',
+        healthcare: 'Healthcare',
+        ecommerce: 'E-commerce',
+        saas: 'SaaS',
+        b2b: 'Business Services',
+        hospitality: 'Hospitality',
+        realestate: 'Real Estate',
+        fitness: 'Fitness',
+        legal: 'Legal'
+    };
+    const category = categoryMap[industryKey] || (industryData[industryKey] && industryData[industryKey].name) || industryKey;
+
+    const matchingBtn = Array.from(document.querySelectorAll('.filter-btn')).find(btn =>
+        btn.textContent.trim().toLowerCase() === category.toLowerCase()
+    );
+    if (matchingBtn) {
+        matchingBtn.click();
+    } else {
+        filterCaseStudies(category);
+    }
+
+    // Scroll to results section
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Close industry modal
+function closeIndustryModal() {
+    const modal = document.getElementById('industryModal');
+    modal.classList.remove('show');
+}
+
+// Show modal again (optional button)
+function reopenIndustryModal() {
+    const modal = document.getElementById('industryModal');
+    modal.classList.add('show');
+    renderIndustryCards();
+}
+
+// Check URL and show case study if navigating with URL parameter
+function checkURLAndShowCaseStudy() {
+    const params = new URLSearchParams(window.location.search);
+    const industry = params.get('industry');
+    
+    if (industry && industryData[industry]) {
+        showCaseStudiesForIndustry(industry);
+        // Close modal if it was shown
+        const modal = document.getElementById('industryModal');
+        modal.classList.remove('show');
+        localStorage.setItem('industryModalShown', 'true');
+    }
+}
+
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+            e.preventDefault();
+            document.querySelector(href).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Close modal when clicking outside
+document.addEventListener('click', function(event) {
+    const modal = document.getElementById('industryModal');
+    if (event.target === modal) {
+        closeIndustryModal();
+    }
+});
+
+// ===== ENGAGEMENT ANIMATIONS =====
+
+// Scroll-reveal: fades/slides cards into view as the visitor scrolls to them
+const scrollRevealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            scrollRevealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+function revealOnScroll(elements) {
+    Array.from(elements).forEach((el, i) => {
+        el.classList.add('reveal-up');
+        el.style.transitionDelay = (Math.min(i, 6) * 0.08) + 's';
+        scrollRevealObserver.observe(el);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    revealOnScroll(document.querySelectorAll(
+        '.stat-card, .case-study, .service-card, .testimonial-card-carousel'
+    ));
+});
+
+// Animated count-up for the "Proven Track Record" stats
+function animateStatNumber(el) {
+    const text = el.textContent.trim();
+    const match = text.match(/^([^\d]*)([\d,]+)(.*)$/);
+    if (!match) return;
+    const [, prefix, numStr, suffix] = match;
+    const hasComma = numStr.includes(',');
+    const target = parseInt(numStr.replace(/,/g, ''), 10);
+    if (isNaN(target)) return;
+
+    const duration = 1200;
+    const start = performance.now();
+
+    function tick(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(eased * target);
+        const formatted = hasComma ? current.toLocaleString('en-US') : current;
+        el.textContent = `${prefix}${formatted}${suffix}`;
+        if (progress < 1) {
+            requestAnimationFrame(tick);
+        } else {
+            el.textContent = text;
+        }
+    }
+    requestAnimationFrame(tick);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const statObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (!prefersReducedMotion) {
+                    animateStatNumber(entry.target);
+                }
+                statObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.4 });
+
+    document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
+});
+</script>
+
+</body>
+</html>

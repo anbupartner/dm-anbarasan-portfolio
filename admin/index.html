@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Portfolio Manager</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #7F77DD;
+            --secondary: #1D9E75;
+            --accent: #378ADD;
+            --dark: #26215C;
+            --light: #F9F8FC;
+            --text: #2C2C2A;
+            --text-secondary: #888780;
+            --border: #E8E6E1;
+            --danger: #E24B4A;
+            --warning: #BA7517;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: #F5F5F5;
+            color: var(--text);
+        }
+
+        .admin-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            min-height: 100vh;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            background: var(--dark);
+            color: white;
+            padding: 24px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 250px;
+            overflow-y: auto;
+        }
+
+        .sidebar-logo {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 12px;
+        }
+
+        .sidebar-menu a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            padding: 12px 16px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .sidebar-menu a:hover,
+        .sidebar-menu a.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .sidebar-menu i {
+            width: 20px;
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            margin-left: 250px;
+            padding: 24px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light);
+        }
+
+        .btn-danger {
+            background: var(--danger);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #C53A39;
+        }
+
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        /* TABS */
+        .tabs {
+            display: flex;
+            gap: 0;
+            background: white;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 24px;
+        }
+
+        .tab {
+            padding: 16px 24px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-secondary);
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .tab:hover {
+            color: var(--text);
+        }
+
+        /* CONTENT SECTIONS */
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        /* CARDS & GRIDS */
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .item-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .item-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        .item-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        .item-card p {
+            margin: 0;
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        /* FORMS */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 13px;
+            font-family: inherit;
+            color: var(--text);
+            transition: all 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(127, 119, 221, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-row.full {
+            grid-template-columns: 1fr;
+        }
+
+        /* TABLES */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th {
+            background: var(--light);
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border);
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr:hover {
+            background: var(--light);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .status-active {
+            background: rgba(99, 153, 34, 0.1);
+            color: #639922;
+        }
+
+        .status-inactive {
+            background: rgba(226, 75, 74, 0.1);
+            color: var(--danger);
+        }
+
+        /* MODALS */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 8px;
+            padding: 0;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+
+        .modal-footer {
+            padding: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        /* ALERTS */
+        .alert {
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .alert-success {
+            background: rgba(99, 153, 34, 0.1);
+            color: #639922;
+            border: 1px solid rgba(99, 153, 34, 0.2);
+        }
+
+        .alert-error {
+            background: rgba(226, 75, 74, 0.1);
+            color: var(--danger);
+            border: 1px solid rgba(226, 75, 74, 0.2);
+        }
+
+        /* STATS */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .admin-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: fixed;
+                left: 0;
+                width: 250px;
+                height: 100vh;
+                z-index: 999;
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+            }
+
+            .sidebar.show {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="admin-container">
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            <i class="fas fa-cog"></i>
+            Admin Panel
+        </div>
+        <ul class="sidebar-menu">
+            <li><a class="menu-item active" data-section="dashboard"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+            <li><a class="menu-item" data-section="industries"><i class="fas fa-layer-group"></i> Industries</a></li>
+            <li><a class="menu-item" data-section="casestudies"><i class="fas fa-briefcase"></i> Case Studies</a></li>
+            <li><a class="menu-item" data-section="services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+            <li><a class="menu-item" data-section="testimonials"><i class="fas fa-comments"></i> Testimonials</a></li>
+            <li><a class="menu-item" data-section="achievements"><i class="fas fa-award"></i> Achievements</a></li>
+            <li><a class="menu-item" data-section="settings"><i class="fas fa-sliders-h"></i> Settings</a></li>
+            <li><a href="digital-marketing-portfolio.html" target="_blank"><i class="fas fa-external-link-alt"></i> View Portfolio</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Admin Panel</h1>
+            <div class="header-actions">
+                <button class="btn btn-secondary" onclick="toggleSidebar()"><i class="fas fa-bars"></i> Menu</button>
+                <button class="btn btn-secondary" onclick="exportData()"><i class="fas fa-download"></i> Export</button>
+            </div>
+        </div>
+
+        <div id="alertContainer"></div>
+
+        <!-- DASHBOARD SECTION -->
+        <section id="dashboard" class="section active">
+            <div class="header">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalProjects">0</div>
+                    <div class="stat-label">Total Case Studies</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalServices">0</div>
+                    <div class="stat-label">Services Listed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalTestimonials">0</div>
+                    <div class="stat-label">Client Testimonials</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalIndustries">0</div>
+                    <div class="stat-label">Industries</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Quick Actions</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 16px;">
+                    <button class="btn btn-primary" onclick="switchSection('industries')"><i class="fas fa-plus"></i> Add Industry</button>
+                    <button class="btn btn-primary" onclick="switchSection('casestudies')"><i class="fas fa-plus"></i> Add Case Study</button>
+                    <button class="btn btn-primary" onclick="switchSection('services')"><i class="fas fa-plus"></i> Add Service</button>
+                    <button class="btn btn-primary" onclick="switchSection('testimonials')"><i class="fas fa-plus"></i> Add Testimonial</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Recent Activity</h2>
+                <div id="activityLog" style="font-size: 13px; color: var(--text-secondary);">
+                    <p>No recent activity. Start by managing your content sections.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- INDUSTRIES SECTION -->
+        <section id="industries" class="section">
+            <div class="header">
+                <h1>Industries Management</h1>
+                <button class="btn btn-primary" onclick="openIndustryModal()"><i class="fas fa-plus"></i> Add Industry</button>
+            </div>
+
+            <div id="industriesList" class="grid"></div>
+        </section>
+
+        <!-- CASE STUDIES SECTION -->
+        <section id="casestudies" class="section">
+            <div class="header">
+                <h1>Case Studies Management</h1>
+                <button class="btn btn-primary" onclick="openCaseStudyModal()"><i class="fas fa-plus"></i> Add Case Study</button>
+            </div>
+
+            <div class="card">
+                <div id="caseStudiesList"></div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="section">
+            <div class="header">
+                <h1>Services Management</h1>
+                <button class="btn btn-primary" onclick="openServiceModal()"><i class="fas fa-plus"></i> Add Service</button>
+            </div>
+
+            <div id="servicesList" class="grid"></div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimonials" class="section">
+            <div class="header">
+                <h1>Client Testimonials</h1>
+                <button class="btn btn-primary" onclick="openTestimonialModal()"><i class="fas fa-plus"></i> Add Testimonial</button>
+            </div>
+
+            <div id="testimonialsList" class="card"></div>
+        </section>
+
+        <!-- ACHIEVEMENTS SECTION -->
+        <section id="achievements" class="section">
+            <div class="header">
+                <h1>Achievements & Stats</h1>
+            </div>
+
+            <div class="card">
+                <h2>Edit Achievement Stats</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Total Projects Delivered</label>
+                        <input type="number" id="projectsDelivered" placeholder="e.g., 85">
+                    </div>
+                    <div class="form-group">
+                        <label>Total Impressions Generated</label>
+                        <input type="text" id="impressionsGenerated" placeholder="e.g., 450M">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Keywords Ranked #1-10</label>
+                        <input type="number" id="keywordsRanked" placeholder="e.g., 2340">
+                    </div>
+                    <div class="form-group">
+                        <label>Client Revenue Generated</label>
+                        <input type="text" id="revenueGenerated" placeholder="e.g., $320M">
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="saveAchievements()"><i class="fas fa-save"></i> Save Achievements</button>
+            </div>
+        </section>
+
+        <!-- SETTINGS SECTION -->
+        <section id="settings" class="section">
+            <div class="header">
+                <h1>Settings</h1>
+            </div>
+
+            <div class="card">
+                <h2>Portfolio Settings</h2>
+                <div class="form-group">
+                    <label>Portfolio Title</label>
+                    <input type="text" id="portfolioTitle" placeholder="e.g., Digital Growth Partner">
+                </div>
+                <div class="form-group">
+                    <label>Portfolio Description</label>
+                    <textarea id="portfolioDescription" placeholder="Main portfolio description..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="contactEmail" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" id="contactPhone" placeholder="+1234567890">
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="saveSettings()"><i class="fas fa-save"></i> Save Settings</button>
+            </div>
+
+            <div class="card">
+                <h2>Data Management</h2>
+                <div style="display: flex; gap: 12px;">
+                    <button class="btn btn-secondary" onclick="exportData()"><i class="fas fa-download"></i> Export All Data</button>
+                    <button class="btn btn-secondary" onclick="importData()"><i class="fas fa-upload"></i> Import Data</button>
+                    <button class="btn btn-danger" onclick="resetData()" style="margin-left: auto;"><i class="fas fa-redo"></i> Reset All Data</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- INDUSTRY MODAL -->
+<div id="industryModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Add/Edit Industry</h2>
+            <button class="modal-close" onclick="closeModal('industryModal')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Industry Name</label>
+                <input type="text" id="industryName" placeholder="e.g., Healthcare">
+            </div>
+            <div class="form-group">
+                <label>Icon (Emoji)</label>
+                <input type="text" id="industryIcon" placeholder="e.g., ⚕️">
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="industryDescription" placeholder="Industry description..."></textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" onclick="closeModal('industryModal')">Cancel</button>
+            <button class="btn btn-primary" onclick="saveIndustry()">Save Industry</button>
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY MODAL -->
+<div id="caseStudyModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Add/Edit Case Study</h2>
+            <button class="modal-close" onclick="closeModal('caseStudyModal')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Industry</label>
+                <select id="caseStudyIndustry"></select>
+            </div>
+            <div class="form-group">
+                <label>Client Name</label>
+                <input type="text" id="caseStudyClient" placeholder="e.g., Tech Startup Inc">
+            </div>
+            <div class="form-group">
+                <label>Result Headline</label>
+                <input type="text" id="caseStudyTitle" placeholder="e.g., $500K → $2.1M ARR in 14 Months">
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="caseStudyDescription" placeholder="Case study details..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Metric 1</label>
+                <input type="text" id="caseStudyMetric1" placeholder="e.g., 3.2x Growth">
+            </div>
+            <div class="form-group">
+                <label>Metric 2</label>
+                <input type="text" id="caseStudyMetric2" placeholder="e.g., -38% CAC">
+            </div>
+            <div class="form-group">
+                <label>Metric 3</label>
+                <input type="text" id="caseStudyMetric3" placeholder="e.g., 320% Revenue Growth">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" onclick="closeModal('caseStudyModal')">Cancel</button>
+            <button class="btn btn-primary" onclick="saveCaseStudy()">Save Case Study</button>
+        </div>
+    </div>
+</div>
+
+<!-- SERVICE MODAL -->
+<div id="serviceModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Add/Edit Service</h2>
+            <button class="modal-close" onclick="closeModal('serviceModal')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Service Number</label>
+                <input type="number" id="serviceNumber" placeholder="e.g., 1">
+            </div>
+            <div class="form-group">
+                <label>Service Name</label>
+                <input type="text" id="serviceName" placeholder="e.g., SEO Services">
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="serviceDescription" placeholder="Service details..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Category</label>
+                <input type="text" id="serviceCategory" placeholder="e.g., Growth">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" onclick="closeModal('serviceModal')">Cancel</button>
+            <button class="btn btn-primary" onclick="saveService()">Save Service</button>
+        </div>
+    </div>
+</div>
+
+<!-- TESTIMONIAL MODAL -->
+<div id="testimonialModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Add/Edit Testimonial</h2>
+            <button class="modal-close" onclick="closeModal('testimonialModal')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Client Name</label>
+                <input type="text" id="testimonialName" placeholder="e.g., Priya Kapoor">
+            </div>
+            <div class="form-group">
+                <label>Client Role/Company</label>
+                <input type="text" id="testimonialRole" placeholder="e.g., CEO, Digital Commerce">
+            </div>
+            <div class="form-group">
+                <label>Rating (1-5)</label>
+                <input type="number" id="testimonialRating" min="1" max="5" placeholder="5">
+            </div>
+            <div class="form-group">
+                <label>Testimonial Text</label>
+                <textarea id="testimonialText" placeholder="Client testimonial message..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Proof Image URL</label>
+                <input type="text" id="testimonialProof" placeholder="https://example.com/proof.jpg">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" onclick="closeModal('testimonialModal')">Cancel</button>
+            <button class="btn btn-primary" onclick="saveTestimonial()">Save Testimonial</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // DATA MANAGEMENT
+    const DEFAULT_DATA = {
+        industries: [
+            { id: 1, name: "E-Commerce", icon: "🛍️", color: "#FF6B6B" },
+            { id: 2, name: "SaaS", icon: "💻", color: "#4ECDC4" },
+            { id: 3, name: "Healthcare", icon: "⚕️", color: "#45B7D1" }
+        ],
+        caseStudies: [
+            {
+                id: 1,
+                title: "$800K → $3.2M ARR in 18 Months",
+                description: "Health & wellness D2C brand was over-dependent on paid ads. Built integrated SEO + content + email strategy to reduce ad spend by 40% while growing revenue 4x.",
+                industry: "E-Commerce",
+                results: "4x ARR Growth, -40% Ad Spend, 68% Organic Revenue",
+                image: "assets/screenshots/case-1.jpg"
+            },
+            {
+                id: 2,
+                title: "+285% Qualified Leads in 12 Months",
+                description: "E-commerce retailer needed sustainable lead pipeline. Optimized website UX, launched Google & LinkedIn ads, built email nurture.",
+                industry: "E-Commerce",
+                results: "+285% Lead Growth, -48% Cost Per Lead, 44/week Qualified Leads",
+                image: "assets/screenshots/case-2.jpg"
+            },
+            {
+                id: 3,
+                title: "$1.2M → $4.1M ARR in 14 Months",
+                description: "SaaS platform had great product, weak go-to-market. Built full GTM strategy: SEO foundation, thought leadership content, LinkedIn sales campaigns.",
+                industry: "SaaS",
+                results: "3.4x ARR Growth, 2.5x MRR, 15% Monthly Growth",
+                image: "assets/screenshots/case-3.jpg"
+            }
+        ],
+        services: [
+            { id: 1, name: "Performance Marketing", category: "Paid Channels", description: "Google Ads, Facebook Ads, LinkedIn Ads optimization and management" },
+            { id: 2, name: "SEO & Organic Growth", category: "Organic", description: "Keyword research, on-page optimization, technical SEO, link building" },
+            { id: 3, name: "Content Marketing", category: "Content", description: "Blog posts, whitepapers, case studies, video content strategy" },
+            { id: 4, name: "Conversion Rate Optimization", category: "Optimization", description: "A/B testing, funnel optimization, landing page design" }
+        ],
+        testimonials: [
+            { id: 1, name: "Priya Kapoor", role: "CEO, Digital Commerce", rating: 5, text: "Absolute game-changer for our growth. In 6 months, organic traffic went from 2K to 25K monthly visitors.", proof: "assets/screenshots/testimonial-1.jpg" },
+            { id: 2, name: "Rajesh Singh", role: "Founder, SaaS Platform", rating: 5, text: "Hired as our first in-house growth strategist. Built our entire marketing system from scratch. Revenue grew 8x in 18 months.", proof: "assets/screenshots/testimonial-2.jpg" },
+            { id: 3, name: "Meera Choudhury", role: "VP Marketing, Enterprise SaaS", rating: 5, text: "Lead generation strategy transformed our B2B pipeline. Cost per qualified lead dropped 62% while lead volume tripled.", proof: "assets/screenshots/testimonial-3.jpg" }
+        ],
+        achievements: {
+            projectsDelivered: 85,
+            impressionsGenerated: "450M",
+            keywordsRanked: 2340,
+            revenueGenerated: "$320M"
+        },
+        settings: {
+            title: "Digital Growth Partner",
+            description: "Strategic digital marketing that drives predictable growth.",
+            email: "hello@example.com",
+            phone: "+1234567890"
+        },
+        activityLog: []
+    };
+
+    let appData = JSON.parse(localStorage.getItem('portfolioData')) || DEFAULT_DATA;
+
+    // INIT
+    document.addEventListener('DOMContentLoaded', function() {
+        initializeMenuItems();
+        loadDashboard();
+    });
+
+    // MENU
+    function initializeMenuItems() {
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const section = this.dataset.section;
+                switchSection(section);
+            });
+        });
+    }
+
+    function switchSection(sectionId) {
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.getElementById(sectionId).classList.add('active');
+
+        document.querySelectorAll('.menu-item').forEach(item => item.classList.remove('active'));
+        document.querySelector(`[data-section="${sectionId}"]`).classList.add('active');
+
+        // Load section content
+        if (sectionId === 'industries') loadIndustries();
+        if (sectionId === 'casestudies') loadCaseStudies();
+        if (sectionId === 'services') loadServices();
+        if (sectionId === 'testimonials') loadTestimonials();
+        if (sectionId === 'achievements') loadAchievements();
+        if (sectionId === 'settings') loadSettings();
+    }
+
+    // DASHBOARD
+    function loadDashboard() {
+        document.getElementById('totalProjects').textContent = appData.caseStudies.length;
+        document.getElementById('totalServices').textContent = appData.services.length;
+        document.getElementById('totalTestimonials').textContent = appData.testimonials.length;
+        document.getElementById('totalIndustries').textContent = appData.industries.length;
+
+        const recentActivity = appData.activityLog.slice(-5).reverse();
+        const activityHtml = recentActivity.length > 0 
+            ? recentActivity.map(log => `<p>✓ ${log}</p>`).join('')
+            : '<p>No recent activity</p>';
+        document.getElementById('activityLog').innerHTML = activityHtml;
+    }
+
+    // INDUSTRIES
+    function loadIndustries() {
+        const html = appData.industries.map((ind, idx) => `
+            <div class="item-card">
+                <div style="font-size: 32px; margin-bottom: 8px;">${ind.icon}</div>
+                <h3>${ind.name}</h3>
+                <p>${ind.description || 'No description'}</p>
+                <div class="item-actions">
+                    <button class="btn btn-sm btn-secondary" onclick="editIndustry(${idx})">Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteIndustry(${idx})">Delete</button>
+                </div>
+            </div>
+        `).join('');
+        document.getElementById('industriesList').innerHTML = html || '<p>No industries added yet</p>';
+    }
+
+    function openIndustryModal(idx = null) {
+        if (idx !== null) {
+            const ind = appData.industries[idx];
+            document.getElementById('industryName').value = ind.name;
+            document.getElementById('industryIcon').value = ind.icon;
+            document.getElementById('industryDescription').value = ind.description || '';
+            document.getElementById('industryModal').dataset.editIndex = idx;
+        } else {
+            document.getElementById('industryName').value = '';
+            document.getElementById('industryIcon').value = '';
+            document.getElementById('industryDescription').value = '';
+            delete document.getElementById('industryModal').dataset.editIndex;
+        }
+        document.getElementById('industryModal').classList.add('show');
+    }
+
+    function editIndustry(idx) {
+        openIndustryModal(idx);
+    }
+
+    function deleteIndustry(idx) {
+        if (confirm('Are you sure?')) {
+            appData.industries.splice(idx, 1);
+            saveData();
+            loadIndustries();
+            showAlert('Industry deleted', 'success');
+        }
+    }
+
+    function saveIndustry() {
+        const name = document.getElementById('industryName').value.trim();
+        const icon = document.getElementById('industryIcon').value.trim();
+        const description = document.getElementById('industryDescription').value.trim();
+
+        if (!name || !icon) {
+            showAlert('Please fill in all fields', 'error');
+            return;
+        }
+
+        const editIdx = document.getElementById('industryModal').dataset.editIndex;
+        const industry = { name, icon, description };
+
+        if (editIdx !== undefined) {
+            appData.industries[editIdx] = industry;
+            logActivity(`Updated industry: ${name}`);
+        } else {
+            appData.industries.push(industry);
+            logActivity(`Added industry: ${name}`);
+        }
+
+        saveData();
+        closeModal('industryModal');
+        loadIndustries();
+        loadDashboard();
+        showAlert('Industry saved successfully', 'success');
+    }
+
+    // CASE STUDIES
+    function loadCaseStudies() {
+        const html = `
+            <table>
+                <thead>
+                    <tr>
+                        <th>Client</th>
+                        <th>Industry</th>
+                        <th>Result</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${appData.caseStudies.map((cs, idx) => `
+                        <tr>
+                            <td>${cs.client}</td>
+                            <td>${cs.industry}</td>
+                            <td>${cs.title}</td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary" onclick="editCaseStudy(${idx})">Edit</button>
+                                <button class="btn btn-sm btn-danger" onclick="deleteCaseStudy(${idx})">Delete</button>
+                            </td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        `;
+        document.getElementById('caseStudiesList').innerHTML = appData.caseStudies.length > 0 
+            ? html 
+            : '<p>No case studies added yet</p>';
+    }
+
+    function openCaseStudyModal(idx = null) {
+        populateIndustrySelect();
+        if (idx !== null) {
+            const cs = appData.caseStudies[idx];
+            document.getElementById('caseStudyIndustry').value = cs.industry;
+            document.getElementById('caseStudyClient').value = cs.client;
+            document.getElementById('caseStudyTitle').value = cs.title;
+            document.getElementById('caseStudyDescription').value = cs.description;
+            document.getElementById('caseStudyMetric1').value = cs.metrics[0] || '';
+            document.getElementById('caseStudyMetric2').value = cs.metrics[1] || '';
+            document.getElementById('caseStudyMetric3').value = cs.metrics[2] || '';
+            document.getElementById('caseStudyModal').dataset.editIndex = idx;
+        } else {
+            document.getElementById('caseStudyIndustry').value = '';
+            document.getElementById('caseStudyClient').value = '';
+            document.getElementById('caseStudyTitle').value = '';
+            document.getElementById('caseStudyDescription').value = '';
+            document.getElementById('caseStudyMetric1').value = '';
+            document.getElementById('caseStudyMetric2').value = '';
+            document.getElementById('caseStudyMetric3').value = '';
+            delete document.getElementById('caseStudyModal').dataset.editIndex;
+        }
+        document.getElementById('caseStudyModal').classList.add('show');
+    }
+
+    function populateIndustrySelect() {
+        const select = document.getElementById('caseStudyIndustry');
+        select.innerHTML = '<option value="">Select Industry</option>' + appData.industries.map(ind => 
+            `<option value="${ind.name}">${ind.name}</option>`
+        ).join('');
+    }
+
+    function editCaseStudy(idx) {
+        openCaseStudyModal(idx);
+    }
+
+    function deleteCaseStudy(idx) {
+        if (confirm('Are you sure?')) {
+            appData.caseStudies.splice(idx, 1);
+            saveData();
+            loadCaseStudies();
+            loadDashboard();
+            showAlert('Case study deleted', 'success');
+        }
+    }
+
+    function saveCaseStudy() {
+        const industry = document.getElementById('caseStudyIndustry').value.trim();
+        const client = document.getElementById('caseStudyClient').value.trim();
+        const title = document.getElementById('caseStudyTitle').value.trim();
+        const description = document.getElementById('caseStudyDescription').value.trim();
+        const metric1 = document.getElementById('caseStudyMetric1').value.trim();
+        const metric2 = document.getElementById('caseStudyMetric2').value.trim();
+        const metric3 = document.getElementById('caseStudyMetric3').value.trim();
+
+        if (!industry || !client || !title) {
+            showAlert('Please fill in required fields', 'error');
+            return;
+        }
+
+        const editIdx = document.getElementById('caseStudyModal').dataset.editIndex;
+        const caseStudy = {
+            industry,
+            client,
+            title,
+            description,
+            metrics: [metric1, metric2, metric3].filter(m => m)
+        };
+
+        if (editIdx !== undefined) {
+            appData.caseStudies[editIdx] = caseStudy;
+            logActivity(`Updated case study: ${client}`);
+        } else {
+            appData.caseStudies.push(caseStudy);
+            logActivity(`Added case study: ${client}`);
+        }
+
+        saveData();
+        closeModal('caseStudyModal');
+        loadCaseStudies();
+        loadDashboard();
+        showAlert('Case study saved successfully', 'success');
+    }
+
+    // SERVICES
+    function loadServices() {
+        const html = appData.services.map((svc, idx) => `
+            <div class="item-card">
+                <h3>${svc.number}. ${svc.name}</h3>
+                <p>${svc.description}</p>
+                <p style="margin-top: 8px; font-size: 11px; color: var(--primary);">${svc.category}</p>
+                <div class="item-actions">
+                    <button class="btn btn-sm btn-secondary" onclick="editService(${idx})">Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteService(${idx})">Delete</button>
+                </div>
+            </div>
+        `).join('');
+        document.getElementById('servicesList').innerHTML = html || '<p>No services added yet</p>';
+    }
+
+    function openServiceModal(idx = null) {
+        if (idx !== null) {
+            const svc = appData.services[idx];
+            document.getElementById('serviceNumber').value = svc.number;
+            document.getElementById('serviceName').value = svc.name;
+            document.getElementById('serviceDescription').value = svc.description;
+            document.getElementById('serviceCategory').value = svc.category;
+            document.getElementById('serviceModal').dataset.editIndex = idx;
+        } else {
+            document.getElementById('serviceNumber').value = appData.services.length + 1;
+            document.getElementById('serviceName').value = '';
+            document.getElementById('serviceDescription').value = '';
+            document.getElementById('serviceCategory').value = '';
+            delete document.getElementById('serviceModal').dataset.editIndex;
+        }
+        document.getElementById('serviceModal').classList.add('show');
+    }
+
+    function editService(idx) {
+        openServiceModal(idx);
+    }
+
+    function deleteService(idx) {
+        if (confirm('Are you sure?')) {
+            appData.services.splice(idx, 1);
+            saveData();
+            loadServices();
+            loadDashboard();
+            showAlert('Service deleted', 'success');
+        }
+    }
+
+    function saveService() {
+        const number = document.getElementById('serviceNumber').value.trim();
+        const name = document.getElementById('serviceName').value.trim();
+        const description = document.getElementById('serviceDescription').value.trim();
+        const category = document.getElementById('serviceCategory').value.trim();
+
+        if (!number || !name || !description) {
+            showAlert('Please fill in all fields', 'error');
+            return;
+        }
+
+        const editIdx = document.getElementById('serviceModal').dataset.editIndex;
+        const service = { number: parseInt(number), name, description, category };
+
+        if (editIdx !== undefined) {
+            appData.services[editIdx] = service;
+            logActivity(`Updated service: ${name}`);
+        } else {
+            appData.services.push(service);
+            logActivity(`Added service: ${name}`);
+        }
+
+        saveData();
+        closeModal('serviceModal');
+        loadServices();
+        loadDashboard();
+        showAlert('Service saved successfully', 'success');
+    }
+
+    // TESTIMONIALS
+    function loadTestimonials() {
+        const html = `
+            <table>
+                <thead>
+                    <tr>
+                        <th>Client</th>
+                        <th>Role</th>
+                        <th>Rating</th>
+                        <th>Message Preview</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${appData.testimonials.map((test, idx) => `
+                        <tr>
+                            <td>${test.name}</td>
+                            <td>${test.role}</td>
+                            <td>${'★'.repeat(test.rating)}</td>
+                            <td>${test.text.substring(0, 50)}...</td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary" onclick="editTestimonial(${idx})">Edit</button>
+                                <button class="btn btn-sm btn-danger" onclick="deleteTestimonial(${idx})">Delete</button>
+                            </td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        `;
+        document.getElementById('testimonialsList').innerHTML = appData.testimonials.length > 0 
+            ? html 
+            : '<p>No testimonials added yet</p>';
+    }
+
+    function openTestimonialModal(idx = null) {
+        if (idx !== null) {
+            const test = appData.testimonials[idx];
+            document.getElementById('testimonialName').value = test.name;
+            document.getElementById('testimonialRole').value = test.role;
+            document.getElementById('testimonialRating').value = test.rating;
+            document.getElementById('testimonialText').value = test.text;
+            document.getElementById('testimonialProof').value = test.proof || '';
+            document.getElementById('testimonialModal').dataset.editIndex = idx;
+        } else {
+            document.getElementById('testimonialName').value = '';
+            document.getElementById('testimonialRole').value = '';
+            document.getElementById('testimonialRating').value = '5';
+            document.getElementById('testimonialText').value = '';
+            document.getElementById('testimonialProof').value = '';
+            delete document.getElementById('testimonialModal').dataset.editIndex;
+        }
+        document.getElementById('testimonialModal').classList.add('show');
+    }
+
+    function editTestimonial(idx) {
+        openTestimonialModal(idx);
+    }
+
+    function deleteTestimonial(idx) {
+        if (confirm('Are you sure?')) {
+            appData.testimonials.splice(idx, 1);
+            saveData();
+            loadTestimonials();
+            loadDashboard();
+            showAlert('Testimonial deleted', 'success');
+        }
+    }
+
+    function saveTestimonial() {
+        const name = document.getElementById('testimonialName').value.trim();
+        const role = document.getElementById('testimonialRole').value.trim();
+        const rating = parseInt(document.getElementById('testimonialRating').value);
+        const text = document.getElementById('testimonialText').value.trim();
+        const proof = document.getElementById('testimonialProof').value.trim();
+
+        if (!name || !role || !text) {
+            showAlert('Please fill in required fields', 'error');
+            return;
+        }
+
+        const editIdx = document.getElementById('testimonialModal').dataset.editIndex;
+        const testimonial = { name, role, rating, text, proof };
+
+        if (editIdx !== undefined) {
+            appData.testimonials[editIdx] = testimonial;
+            logActivity(`Updated testimonial from ${name}`);
+        } else {
+            appData.testimonials.push(testimonial);
+            logActivity(`Added testimonial from ${name}`);
+        }
+
+        saveData();
+        closeModal('testimonialModal');
+        loadTestimonials();
+        loadDashboard();
+        showAlert('Testimonial saved successfully', 'success');
+    }
+
+    // ACHIEVEMENTS
+    function loadAchievements() {
+        const ach = appData.achievements;
+        document.getElementById('projectsDelivered').value = ach.projectsDelivered;
+        document.getElementById('impressionsGenerated').value = ach.impressionsGenerated;
+        document.getElementById('keywordsRanked').value = ach.keywordsRanked;
+        document.getElementById('revenueGenerated').value = ach.revenueGenerated;
+    }
+
+    function saveAchievements() {
+        appData.achievements = {
+            projectsDelivered: parseInt(document.getElementById('projectsDelivered').value) || 0,
+            impressionsGenerated: document.getElementById('impressionsGenerated').value.trim(),
+            keywordsRanked: parseInt(document.getElementById('keywordsRanked').value) || 0,
+            revenueGenerated: document.getElementById('revenueGenerated').value.trim()
+        };
+        saveData();
+        logActivity('Updated achievements stats');
+        loadDashboard();
+        showAlert('Achievements saved successfully', 'success');
+    }
+
+    // SETTINGS
+    function loadSettings() {
+        const sett = appData.settings;
+        document.getElementById('portfolioTitle').value = sett.title;
+        document.getElementById('portfolioDescription').value = sett.description;
+        document.getElementById('contactEmail').value = sett.email;
+        document.getElementById('contactPhone').value = sett.phone;
+    }
+
+    function saveSettings() {
+        appData.settings = {
+            title: document.getElementById('portfolioTitle').value.trim(),
+            description: document.getElementById('portfolioDescription').value.trim(),
+            email: document.getElementById('contactEmail').value.trim(),
+            phone: document.getElementById('contactPhone').value.trim()
+        };
+        saveData();
+        logActivity('Updated portfolio settings');
+        showAlert('Settings saved successfully', 'success');
+    }
+
+    // UTILITIES
+    function saveData() {
+        localStorage.setItem('portfolioData', JSON.stringify(appData));
+    }
+
+    function logActivity(message) {
+        const date = new Date().toLocaleString();
+        appData.activityLog.push(`${message} (${date})`);
+        if (appData.activityLog.length > 20) {
+            appData.activityLog = appData.activityLog.slice(-20);
+        }
+        saveData();
+    }
+
+    function showAlert(message, type = 'success') {
+        const alertContainer = document.getElementById('alertContainer');
+        const alertDiv = document.createElement('div');
+        alertDiv.className = `alert alert-${type} show`;
+        alertDiv.innerHTML = message;
+        alertContainer.appendChild(alertDiv);
+        
+        setTimeout(() => {
+            alertDiv.remove();
+        }, 3000);
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).classList.remove('show');
+    }
+
+    function toggleSidebar() {
+        document.querySelector('.sidebar').classList.toggle('show');
+    }
+
+    function exportData() {
+        const dataStr = JSON.stringify(appData, null, 2);
+        const dataBlob = new Blob([dataStr], { type: 'application/json' });
+        const url = URL.createObjectURL(dataBlob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'portfolio-data-' + new Date().toISOString().slice(0, 10) + '.json';
+        link.click();
+        showAlert('Data exported successfully', 'success');
+    }
+
+    function importData() {
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = '.json';
+        input.onchange = (e) => {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                try {
+                    const imported = JSON.parse(event.target.result);
+                    appData = imported;
+                    saveData();
+                    loadDashboard();
+                    showAlert('Data imported successfully', 'success');
+                } catch (err) {
+                    showAlert('Error importing data: ' + err.message, 'error');
+                }
+            };
+            reader.readAsText(file);
+        };
+        input.click();
+    }
+
+    function resetData() {
+        if (confirm('Are you sure? This will delete ALL data!')) {
+            appData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+            saveData();
+            loadDashboard();
+            showAlert('All data reset to default', 'success');
+        }
+    }
+
+    // Close modals on background click
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
