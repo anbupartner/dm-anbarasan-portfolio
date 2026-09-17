@@ -7,88 +7,23 @@
     <title>Digital Marketing Consultant - Growth Strategy for D2C, B2C & B2B</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script>
-        // Industry Case Study Data
+        // Industry Selector Popup Data — kept in sync with the Results section
+        // filter buttons and case-studies-data.json's industry values.
         const industryData = {
-            education: {
-                name: 'Education',
-                icon: '🎓',
-                caseStudies: [
-                    { id: 'edtech-platform', name: 'EdTech Platform', title: '$400K → $1.8M ARR in 12 Months', metrics: ['3.5x Growth', '+284% Organic', '2.4x CAC'] },
-                    { id: 'online-courses', name: 'Online Courses Platform', title: '+520% Student Enrollment in 18 Months', metrics: ['+520% Enrollments', '35% Lower CAC', '$2.1M Revenue'] }
-                ]
-            },
-            dental: {
-                name: 'Dental',
-                icon: '🦷',
-                caseStudies: [
-                    { id: 'dental-clinic-chain', name: 'Dental Clinic Chain', title: '+340% New Patient Appointments', metrics: ['+340% Appointments', '42% CAC Reduction', '95% Booking Rate'] },
-                    { id: 'orthodontics', name: 'Orthodontics Practice', title: '$120K → $680K Revenue in 14 Months', metrics: ['5.7x Growth', '+289% Leads', '#1 Local Rankings'] }
-                ]
-            },
-            healthcare: {
-                name: 'Healthcare',
-                icon: '⚕️',
-                caseStudies: [
-                    { id: 'telehealth-platform', name: 'Telehealth Platform', title: '$600K → $3.2M ARR in 15 Months', metrics: ['5.3x Growth', '450K+ Impressions', '3.8K Keywords #1-10'] },
-                    { id: 'wellness-clinic', name: 'Wellness Clinic', title: '+425% Patient Bookings in 12 Months', metrics: ['+425% Bookings', '-55% CAC', '89% Retention'] }
-                ]
-            },
-            ecommerce: {
-                name: 'E-Commerce',
-                icon: '🛒',
-                caseStudies: [
-                    { id: 'd2c-wellness', name: 'D2C Wellness Brand', title: '$800K → $3.2M ARR in 18 Months', metrics: ['4x Growth', '-40% Ad Spend', '68% Organic Revenue'] },
-                    { id: 'fashion-retail', name: 'Fashion Retailer', title: '+265% Organic Revenue in 9 Months', metrics: ['+265% Organic', 'AED 180K Revenue', '87 Keywords #1-10'] }
-                ]
-            },
-            saas: {
-                name: 'SaaS',
-                icon: '💻',
-                caseStudies: [
-                    { id: 'saas-platform', name: 'SaaS Growth Platform', title: '$1.2M → $4.1M ARR in 14 Months', metrics: ['3.4x Growth', '156 SQL/Month', '32% Win Rate'] },
-                    { id: 'analytics-platform', name: 'Analytics Platform', title: '$500K → $2.1M ARR in 14 Months', metrics: ['3.2x Growth', '-38% CAC', '320% Revenue Growth'] }
-                ]
-            },
-            b2b: {
-                name: 'B2B Services',
-                icon: '📊',
-                caseStudies: [
-                    { id: 'enterprise-software', name: 'Enterprise Software', title: '+285% Qualified Leads in 12 Months', metrics: ['+285% Leads', '-52% CPL', '47 Leads/Week'] },
-                    { id: 'consulting-firm', name: 'Consulting Firm', title: '+380% Organic Leads in 8 Months', metrics: ['+380% Leads', '340 Keywords #1-10', '$1.2M Pipeline'] }
-                ]
-            },
-            hospitality: {
-                name: 'Hospitality',
-                icon: '🏨',
-                caseStudies: [
-                    { id: 'hotel-chain', name: 'Hotel Chain', title: '+285% Bookings in 10 Months', metrics: ['+285% Bookings', '42% Higher ADR', '$4.2M Revenue'] },
-                    { id: 'restaurant-group', name: 'Restaurant Group', title: '+520% Table Reservations', metrics: ['+520% Reservations', '3.2x Revenue Growth', '89% Fill Rate'] }
-                ]
-            },
-            realestate: {
-                name: 'Real Estate',
-                icon: '🏠',
-                caseStudies: [
-                    { id: 'property-dev', name: 'Property Developer', title: '+425% Qualified Leads in 12 Months', metrics: ['+425% Leads', '$8.5M Sales Pipeline', '68% Conversion'] },
-                    { id: 'realestate-agency', name: 'Real Estate Agency', title: '$200K → $1.2M Revenue in 18 Months', metrics: ['6x Growth', '+340% Leads', '#1 Local Market'] }
-                ]
-            },
-            fitness: {
-                name: 'Fitness & Wellness',
-                icon: '💪',
-                caseStudies: [
-                    { id: 'gym-chain', name: 'Gym Chain', title: '+380% Memberships in 14 Months', metrics: ['+380% Memberships', '45% Lower CAC', '2,400 Members'] },
-                    { id: 'wellness-app', name: 'Wellness App', title: '50K → 350K Downloads in 12 Months', metrics: ['7x Growth', '+285% Active Users', '$1.8M Revenue'] }
-                ]
-            },
-            legal: {
-                name: 'Legal Services',
-                icon: '⚖️',
-                caseStudies: [
-                    { id: 'law-firm', name: 'Law Firm', title: '+340% Qualified Cases in 12 Months', metrics: ['+340% Cases', '-65% CAC', '$2.1M Revenue Growth'] },
-                    { id: 'legal-tech', name: 'Legal Tech Platform', title: '$300K → $1.5M ARR in 15 Months', metrics: ['5x Growth', '340 Keywords #1-10', '4.2K Monthly Leads'] }
-                ]
-            }
+            manufacturing: { name: 'Manufacturing', icon: '🏭' },
+            automobile: { name: 'Automobile', icon: '🚗' },
+            technology: { name: 'Technology', icon: '💻' },
+            healthcare: { name: 'Healthcare', icon: '⚕️' },
+            dental: { name: 'Dental', icon: '🦷' },
+            finance: { name: 'Finance', icon: '💰' },
+            ecommerce: { name: 'E-commerce', icon: '🛍️' },
+            travel: { name: 'Travel', icon: '✈️' },
+            realestate: { name: 'Real Estate', icon: '🏠' },
+            retail: { name: 'Retail', icon: '🛍️' },
+            logistics: { name: 'Logistics', icon: '🚚' },
+            itservices: { name: 'IT Services', icon: '🖥️' },
+            professionalservices: { name: 'Professional Services', icon: '💼' },
+            businessservices: { name: 'Business Services', icon: '📈' }
         };
     </script>
     <style>
@@ -3550,19 +3485,9 @@ function renderIndustryCards() {
 // Reuses the same filterCaseStudies()/carousel the Results section buttons use,
 // instead of writing placeholder content into the shared #filteredCaseStudies element.
 function showCaseStudiesForIndustry(industryKey) {
-    const categoryMap = {
-        education: 'Education',
-        dental: 'Dental',
-        healthcare: 'Healthcare',
-        ecommerce: 'E-commerce',
-        saas: 'SaaS',
-        b2b: 'Business Services',
-        hospitality: 'Hospitality',
-        realestate: 'Real Estate',
-        fitness: 'Fitness',
-        legal: 'Legal'
-    };
-    const category = categoryMap[industryKey] || (industryData[industryKey] && industryData[industryKey].name) || industryKey;
+    const industry = industryData[industryKey];
+    if (!industry) return;
+    const category = industry.name;
 
     const matchingBtn = Array.from(document.querySelectorAll('.filter-btn')).find(btn =>
         btn.textContent.trim().toLowerCase() === category.toLowerCase()
