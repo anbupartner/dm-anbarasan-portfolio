@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "image": "assets/case_studies/case-1.png",
     "title": "+60% Qualified Leads | -21% CPL | 4x ROAS",
     "industry": "Manufacturing / Agricultural Machinery",
     "client": "George Maijo Agri Machinery",
@@ -12,27 +13,69 @@
     "products": "Tractors, power tillers, combine harvesters, threshers, and implements. Annual equipment value ranges from ₹2L to ₹20L per unit.",
     "marketOverview": "The Indian agricultural machinery market is growing at 8-10% annually. With government subsidies and mechanization initiatives, demand is increasing but competition is intense with 50+ major manufacturers.",
     "competitors": [
-      {"name": "Mahindra & Mahindra", "position": "Market leader, strong brand, extensive dealer network", "differentiation": "Smaller, more agile, better personal service"},
-      {"name": "John Deere India", "position": "Premium segment focus", "differentiation": "Better value for money"},
-      {"name": "TAFE (Tractors and Farm Equipment)", "position": "Strong regional presence", "differentiation": "Better digital reach"}
+      {
+        "name": "Mahindra & Mahindra",
+        "position": "Market leader, strong brand, extensive dealer network",
+        "differentiation": "Smaller, more agile, better personal service"
+      },
+      {
+        "name": "John Deere India",
+        "position": "Premium segment focus",
+        "differentiation": "Better value for money"
+      },
+      {
+        "name": "TAFE (Tractors and Farm Equipment)",
+        "position": "Strong regional presence",
+        "differentiation": "Better digital reach"
+      }
     ],
     "advantages": "Strong local relationships with dealers, better after-sales service, competitive pricing, faster delivery, personalized customer approach.",
     "challenges": "Limited digital visibility compared to large manufacturers, low online inquiry conversion, lack of brand awareness in new markets, inefficient dealer acquisition process, inconsistent lead quality.",
-    "painPoints": ["Dealers had no digital way to find customers", "Farmers searching online didn't know about George Maijo", "No systematic lead nurturing process", "Marketing spend scattered with no ROI tracking", "High CPL of ₹3,500-4,000", "Seasonal demand not accounted for"],
+    "painPoints": [
+      "Dealers had no digital way to find customers",
+      "Farmers searching online didn't know about George Maijo",
+      "No systematic lead nurturing process",
+      "Marketing spend scattered with no ROI tracking",
+      "High CPL of ₹3,500-4,000",
+      "Seasonal demand not accounted for"
+    ],
     "challengeImpact": "Missing 40-50% of potential sales to better-marketed competitors. Average deal cycle was 4-6 months with high drop-off rates. Revenue growth plateaued.",
     "strategyOverview": "Integrated digital acquisition strategy combining organic search visibility, high-intent paid search, social awareness campaigns, automated lead nurturing, and direct sales coordination.",
     "phase1": "Comprehensive audit of marketing efforts, SEO gap analysis, competitor analysis, dealer interview, farmer behavior research, lead flow mapping.",
     "phase2": "SEO optimization for high-value keywords, Google Ads for search intent, dealer-focused landing pages, CRM implementation for lead tracking.",
     "phase3": "A/B testing ad creatives, landing page optimization, refined targeting based on geography and seasonality, email nurture sequences.",
     "phase4": "Expanded to high-performing regions, increased budget allocation, Meta Ads for awareness, referral program for dealers, seasonal campaigns.",
-    "services": ["SEO", "Google Ads", "Meta Ads", "Landing Pages", "CRM Automation", "Lead Nurturing", "Dealer Network Marketing"],
-    "results": ["+60% qualified leads", "-21% reduction in CPL", "+40% organic growth", "4x ROAS", "₹40L revenue generated", "+35% dealer acquisition"],
-    "metrics": {"Monthly Qualified Leads": "+60%", "Cost Per Lead": "-21%", "ROAS": "4x", "Organic Growth": "+40%", "Revenue Generated": "₹40L", "Deal Closure": "+28%"},
+    "services": [
+      "SEO",
+      "Google Ads",
+      "Meta Ads",
+      "Landing Pages",
+      "CRM Automation",
+      "Lead Nurturing",
+      "Dealer Network Marketing"
+    ],
+    "results": [
+      "+60% qualified leads",
+      "-21% reduction in CPL",
+      "+40% organic growth",
+      "4x ROAS",
+      "₹40L revenue generated",
+      "+35% dealer acquisition"
+    ],
+    "metrics": {
+      "Monthly Qualified Leads": "+60%",
+      "Cost Per Lead": "-21%",
+      "ROAS": "4x",
+      "Organic Growth": "+40%",
+      "Revenue Generated": "₹40L",
+      "Deal Closure": "+28%"
+    },
     "roi": "For every ₹1 spent, generated ₹4 in sales revenue. ₹60L spend generated ₹2.4Cr in revenue. Internal sales efficiency improved 22%.",
     "description": "Integrated digital marketing for dealer and farmer acquisition across multiple states."
   },
   {
     "id": 2,
+    "image": "assets/case_studies/case-2.png",
     "title": "Organic + Paid Acquisition Framework",
     "industry": "Manufacturing / Consumer Products",
     "client": "SleepCoSee",
@@ -44,27 +87,65 @@
     "products": "Premium mattresses (₹25K-80K), pillows, bedding. Average order value ₹40K.",
     "marketOverview": "Indian mattress market worth ₹8,000Cr, growing at 12% annually. 200+ brands competing, increasing e-commerce penetration.",
     "competitors": [
-      {"name": "Wakefit", "position": "Online-first, VC funded", "differentiation": "Premium quality at competitive prices"},
-      {"name": "Nilkamal", "position": "Traditional retail, established", "differentiation": "Direct digital engagement"},
-      {"name": "Urban Ladder", "position": "Multi-category furniture", "differentiation": "Focused expertise"}
+      {
+        "name": "Wakefit",
+        "position": "Online-first, VC funded",
+        "differentiation": "Premium quality at competitive prices"
+      },
+      {
+        "name": "Nilkamal",
+        "position": "Traditional retail, established",
+        "differentiation": "Direct digital engagement"
+      },
+      {
+        "name": "Urban Ladder",
+        "position": "Multi-category furniture",
+        "differentiation": "Focused expertise"
+      }
     ],
     "advantages": "Superior product quality, better customer reviews (4.7 rating), ethical sourcing, eco-friendly options.",
     "challenges": "High customer acquisition cost, low organic visibility, intense online competition, seasonal demand fluctuations.",
-    "painPoints": ["Not ranking for mattress searches", "Low conversion on paid ads (0.8%)", "Brand unknown to online shoppers", "Retail partners not using digital", "High cart abandonment (72%)"],
+    "painPoints": [
+      "Not ranking for mattress searches",
+      "Low conversion on paid ads (0.8%)",
+      "Brand unknown to online shoppers",
+      "Retail partners not using digital",
+      "High cart abandonment (72%)"
+    ],
     "challengeImpact": "Losing customers to better-marketed competitors despite superior product. Growth stalled at 20% annually.",
     "strategyOverview": "Integrated SEO and paid strategy with content marketing for authority building.",
     "phase1": "Keyword research for mattress/sleep queries, competitor SEO analysis, site audit, content gap identification.",
     "phase2": "Blog content creation for sleep health, product page optimization, Google Ads for high-intent keywords, Meta Ads for awareness.",
     "phase3": "Content expansion, influencer partnerships, customer reviews leverage, email marketing setup.",
     "phase4": "Scaling across regions, affiliate programs, seasonal campaign optimization.",
-    "services": ["SEO", "Google Ads", "Meta Ads", "Content Marketing", "Email Marketing", "Influencer Partnerships"],
-    "results": ["+150% organic traffic", "-35% CAC", "+250% qualified leads", "3.2x ROAS", "50% conversion improvement"],
-    "metrics": {"Organic Traffic": "+150%", "CAC Reduction": "-35%", "Conversion Rate": "+50%", "ROAS": "3.2x", "Monthly Sales": "+180%"},
+    "services": [
+      "SEO",
+      "Google Ads",
+      "Meta Ads",
+      "Content Marketing",
+      "Email Marketing",
+      "Influencer Partnerships"
+    ],
+    "results": [
+      "+150% organic traffic",
+      "-35% CAC",
+      "+250% qualified leads",
+      "3.2x ROAS",
+      "50% conversion improvement"
+    ],
+    "metrics": {
+      "Organic Traffic": "+150%",
+      "CAC Reduction": "-35%",
+      "Conversion Rate": "+50%",
+      "ROAS": "3.2x",
+      "Monthly Sales": "+180%"
+    },
     "roi": "₹40L investment returned ₹1.2Cr in revenue over 6 months.",
     "description": "Integrated SEO, Google Ads and Meta Ads strategy for qualified customer acquisition."
   },
   {
     "id": 3,
+    "image": "assets/case_studies/case-3.png",
     "title": "Automobile Branding + Lead Generation",
     "industry": "Automobile",
     "client": "Arena of Ernakulam",
@@ -76,27 +157,65 @@
     "products": "New vehicles (₹8L-30L), used cars, service packages, accessories, financing.",
     "marketOverview": "Kerala auto market ₹1,500Cr annually. Online research 70% of buyers. 150+ dealers competing in region.",
     "competitors": [
-      {"name": "Local independent dealers", "position": "Traditional, fragmented", "differentiation": "Unified digital experience"},
-      {"name": "Large multi-brand chains", "position": "Corporate, high volume", "differentiation": "Personal touch"},
-      {"name": "Online auto platforms", "position": "Aggregators", "differentiation": "Physical presence, service"}
+      {
+        "name": "Local independent dealers",
+        "position": "Traditional, fragmented",
+        "differentiation": "Unified digital experience"
+      },
+      {
+        "name": "Large multi-brand chains",
+        "position": "Corporate, high volume",
+        "differentiation": "Personal touch"
+      },
+      {
+        "name": "Online auto platforms",
+        "position": "Aggregators",
+        "differentiation": "Physical presence, service"
+      }
     ],
     "advantages": "Prime location, experienced sales team, strong service center, genuine customer reviews.",
     "challenges": "Weak online presence, not visible in digital searches, Instagram only, no website optimization.",
-    "painPoints": ["Website poor and outdated", "Not on Google Business Profile optimization", "No social media strategy", "Customers researching elsewhere", "Low inquiry volume"],
+    "painPoints": [
+      "Website poor and outdated",
+      "Not on Google Business Profile optimization",
+      "No social media strategy",
+      "Customers researching elsewhere",
+      "Low inquiry volume"
+    ],
     "challengeImpact": "Losing 30-40% of potential customers to competitors with better online presence.",
     "strategyOverview": "Complete digital branding overhaul with social media strategy.",
     "phase1": "Website redesign, Google Business Profile optimization, social media audit.",
     "phase2": "Instagram strategy (daily posts, stories, reels), Facebook community building, Google Ads launch.",
     "phase3": "User-generated content campaigns, customer testimonials, local SEO.",
     "phase4": "Influencer partnerships, seasonal campaigns, lead nurturing.",
-    "services": ["Web Design", "Social Media Marketing", "Google Business Profile", "Google Ads", "Content Creation", "Community Management"],
-    "results": ["+300% website traffic", "+250% Instagram followers", "+180% inquiries", "150 qualified leads/month", "2.8x ROAS"],
-    "metrics": {"Website Traffic": "+300%", "Instagram Growth": "+250%", "Monthly Inquiries": "+180%", "Lead Cost": "-40%", "Test Drives": "+200%"},
+    "services": [
+      "Web Design",
+      "Social Media Marketing",
+      "Google Business Profile",
+      "Google Ads",
+      "Content Creation",
+      "Community Management"
+    ],
+    "results": [
+      "+300% website traffic",
+      "+250% Instagram followers",
+      "+180% inquiries",
+      "150 qualified leads/month",
+      "2.8x ROAS"
+    ],
+    "metrics": {
+      "Website Traffic": "+300%",
+      "Instagram Growth": "+250%",
+      "Monthly Inquiries": "+180%",
+      "Lead Cost": "-40%",
+      "Test Drives": "+200%"
+    },
     "roi": "₹20L spend generated ₹60L in vehicle sales.",
     "description": "Digital branding and social media strategy for automobile customer acquisition."
   },
   {
     "id": 4,
+    "image": "assets/case_studies/case-4.png",
     "title": "Multi-Market B2B Brand & Demand Generation",
     "industry": "Technology / Business Services",
     "client": "Redington",
@@ -108,27 +227,64 @@
     "products": "Networking equipment, security solutions, cloud services, enterprise software licenses.",
     "marketOverview": "Indian IT distribution market ₹50,000Cr, growing 15% YoY.",
     "competitors": [
-      {"name": "Ingram Micro", "position": "Global leader", "differentiation": "Local expertise"},
-      {"name": "Tech Data", "position": "Major distributor", "differentiation": "Better customer service"},
-      {"name": "Regional players", "position": "Price competition", "differentiation": "Value-added services"}
+      {
+        "name": "Ingram Micro",
+        "position": "Global leader",
+        "differentiation": "Local expertise"
+      },
+      {
+        "name": "Tech Data",
+        "position": "Major distributor",
+        "differentiation": "Better customer service"
+      },
+      {
+        "name": "Regional players",
+        "position": "Price competition",
+        "differentiation": "Value-added services"
+      }
     ],
     "advantages": "Wide product range, strong vendor relationships, technical expertise, good margins.",
     "challenges": "Low brand visibility, competitors better positioned, limited demand generation, sales team scattered efforts.",
-    "painPoints": ["Visibility in B2B searches low", "Lead quality poor", "Sales process not optimized", "No digital demand generation", "Competitor pricing visible"],
+    "painPoints": [
+      "Visibility in B2B searches low",
+      "Lead quality poor",
+      "Sales process not optimized",
+      "No digital demand generation",
+      "Competitor pricing visible"
+    ],
     "challengeImpact": "Losing deals to better-branded competitors despite competitive offering.",
     "strategyOverview": "B2B demand generation through content marketing and paid search.",
     "phase1": "B2B buyer research, keyword mapping, competitor analysis, content strategy.",
     "phase2": "WhitePaper creation, case studies, Google Ads for B2B keywords, LinkedIn ads.",
     "phase3": "Webinar series, thought leadership content, email nurturing.",
     "phase4": "Account-based marketing for top prospects, partnership programs.",
-    "services": ["B2B Marketing", "Content Marketing", "Google Ads", "LinkedIn Ads", "Webinars", "ABM"],
-    "results": ["+400% qualified leads", "+250% pipeline value", "3.5x ROAS", "+60% win rate improvement"],
-    "metrics": {"B2B Leads": "+400%", "Pipeline Value": "+250%", "Win Rate": "+60%", "Sales Cycle": "-20 days", "ROAS": "3.5x"},
+    "services": [
+      "B2B Marketing",
+      "Content Marketing",
+      "Google Ads",
+      "LinkedIn Ads",
+      "Webinars",
+      "ABM"
+    ],
+    "results": [
+      "+400% qualified leads",
+      "+250% pipeline value",
+      "3.5x ROAS",
+      "+60% win rate improvement"
+    ],
+    "metrics": {
+      "B2B Leads": "+400%",
+      "Pipeline Value": "+250%",
+      "Win Rate": "+60%",
+      "Sales Cycle": "-20 days",
+      "ROAS": "3.5x"
+    },
     "roi": "₹50L spend generated ₹2Cr in closed deals.",
     "description": "B2B marketing and demand generation across multiple markets and business segments."
   },
   {
     "id": 5,
+    "image": "assets/case_studies/case-5.png",
     "title": "SEO + PPC Client Acquisition",
     "industry": "Technology / Digital Services",
     "client": "Acclary Technology",
@@ -140,29 +296,61 @@
     "products": "Custom software development, staff augmentation, digital consulting, cloud migration services.",
     "marketOverview": "Indian IT services market ₹500Cr+, growing 18% YoY, intense competition.",
     "competitors": [
-      {"name": "TCS/Infosys/Wipro", "position": "Large established", "differentiation": "Specialized agile approach"},
-      {"name": "Mid-size service firms", "position": "Similar services", "differentiation": "Better communication, faster delivery"}
+      {
+        "name": "TCS/Infosys/Wipro",
+        "position": "Large established",
+        "differentiation": "Specialized agile approach"
+      },
+      {
+        "name": "Mid-size service firms",
+        "position": "Similar services",
+        "differentiation": "Better communication, faster delivery"
+      }
     ],
     "advantages": "Expert team, client-focused, 12+ years experience, strong retention rate (95%).",
     "challenges": "Low brand visibility, inconsistent lead flow, high CAC, long sales cycles.",
-    "painPoints": ["Not found for service searches", "Competitors ranking higher", "Lead quality varies", "No clear value proposition online", "Slow conversion"],
+    "painPoints": [
+      "Not found for service searches",
+      "Competitors ranking higher",
+      "Lead quality varies",
+      "No clear value proposition online",
+      "Slow conversion"
+    ],
     "challengeImpact": "Underutilized capacity due to lead shortage, revenue plateaued.",
     "strategyOverview": "Organic and paid strategy with thought leadership positioning.",
     "phase1": "Service keyword research, competitor SEO analysis, content audit.",
     "phase2": "SEO for service pages, case study optimization, Google Ads for high-intent keywords, PPC optimization.",
     "phase3": "Blog on technology trends, LinkedIn content, testimonial videos.",
     "phase4": "Industry partnerships, referral programs, webinar series.",
-    "services": ["SEO", "Google Ads", "LinkedIn Ads", "Content Marketing", "Video Marketing"],
-    "results": ["+200% organic leads", "-45% CAC", "+320% qualified pipeline", "4.2x ROAS"],
-    "metrics": {"Organic Leads": "+200%", "CAC": "-45%", "Pipeline": "+320%", "Conversion": "+85%", "ROAS": "4.2x"},
+    "services": [
+      "SEO",
+      "Google Ads",
+      "LinkedIn Ads",
+      "Content Marketing",
+      "Video Marketing"
+    ],
+    "results": [
+      "+200% organic leads",
+      "-45% CAC",
+      "+320% qualified pipeline",
+      "4.2x ROAS"
+    ],
+    "metrics": {
+      "Organic Leads": "+200%",
+      "CAC": "-45%",
+      "Pipeline": "+320%",
+      "Conversion": "+85%",
+      "ROAS": "4.2x"
+    },
     "roi": "₹35L investment generated ₹1.5Cr in new client contracts.",
     "description": "Integrated SEO and PPC strategy for professional services client acquisition."
   },
   {
     "id": 6,
+    "image": "assets/case_studies/case-6.png",
     "title": "Google Ads + Client Acquisition",
     "industry": "Digital Marketing / Technology",
-    "client": "SocialHi5",
+    "client": "C",
     "duration": "4 Months",
     "website": "https://www.linkedin.com/company/socialhi5/posts/",
     "about": "SocialHi5 is a social media marketing agency helping brands build and grow their social presence across platforms.",
@@ -171,26 +359,56 @@
     "products": "Social media management, content creation, influencer marketing, paid social campaigns.",
     "marketOverview": "Social media marketing services market growing 35% YoY in India.",
     "competitors": [
-      {"name": "Large digital agencies", "position": "Full-service", "differentiation": "Social-specialized"},
-      {"name": "Freelancers", "position": "Low price", "differentiation": "Better results and reporting"}
+      {
+        "name": "Large digital agencies",
+        "position": "Full-service",
+        "differentiation": "Social-specialized"
+      },
+      {
+        "name": "Freelancers",
+        "position": "Low price",
+        "differentiation": "Better results and reporting"
+      }
     ],
     "advantages": "Specialized expertise, proven results, affordable, good communication.",
     "challenges": "Unknown brand, hard to differentiate, inconsistent lead flow.",
-    "painPoints": ["Not visible in agency searches", "Agencies searched spend on Google Ads", "High competition", "Long sales cycle"],
+    "painPoints": [
+      "Not visible in agency searches",
+      "Agencies searched spend on Google Ads",
+      "High competition",
+      "Long sales cycle"
+    ],
     "challengeImpact": "Inconsistent revenue, high pressure to deliver results from inconsistent lead flow.",
     "strategyOverview": "Performance-driven Google Ads campaign optimized for lead quality.",
     "phase1": "Keyword research for agency searches, competitive bidding analysis, landing page audit.",
     "phase2": "Google Ads campaign launch, landing page optimization, conversion tracking.",
     "phase3": "A/B testing, bid optimization, geographic targeting, keyword refining.",
     "phase4": "Scaling successful campaigns, budget increase.",
-    "services": ["Google Ads", "Landing Page Optimization", "Conversion Optimization", "Analytics"],
-    "results": ["+500% leads", "-50% CPC", "+4.8x ROAS", "15+ new clients"],
-    "metrics": {"Monthly Leads": "+500%", "CPC": "-50%", "Conversion Rate": "+120%", "ROAS": "4.8x", "New Clients": "15+"},
+    "services": [
+      "Google Ads",
+      "Landing Page Optimization",
+      "Conversion Optimization",
+      "Analytics"
+    ],
+    "results": [
+      "+500% leads",
+      "-50% CPC",
+      "+4.8x ROAS",
+      "15+ new clients"
+    ],
+    "metrics": {
+      "Monthly Leads": "+500%",
+      "CPC": "-50%",
+      "Conversion Rate": "+120%",
+      "ROAS": "4.8x",
+      "New Clients": "15+"
+    },
     "roi": "₹15L spend generated ₹72L in annualized client contracts.",
     "description": "Performance-focused Google Ads for agency client acquisition."
   },
   {
     "id": 7,
+    "image": "assets/case_studies/case-7.png",
     "title": "Digital Branding + New Client Acquisition",
     "industry": "Technology / Digital Services",
     "client": "Trioangle",
@@ -202,26 +420,56 @@
     "products": "Mobile app development, web applications, IoT solutions, blockchain development.",
     "marketOverview": "App development market growing 20% YoY, high competition from 1000+ developers/agencies.",
     "competitors": [
-      {"name": "Large software companies", "position": "Established, big projects", "differentiation": "Specialized in startups"},
-      {"name": "Freelancers", "position": "Low cost", "differentiation": "Team expertise and accountability"}
+      {
+        "name": "Large software companies",
+        "position": "Established, big projects",
+        "differentiation": "Specialized in startups"
+      },
+      {
+        "name": "Freelancers",
+        "position": "Low cost",
+        "differentiation": "Team expertise and accountability"
+      }
     ],
     "advantages": "Young, energetic team, innovative approach, quick turnaround, startup mentality.",
     "challenges": "Minimal brand presence, portfolio weak, hard to find online, pricing unclear.",
-    "painPoints": ["No brand awareness", "Website outdated", "Not in startup directories", "No case studies published", "Portfolio limited"],
+    "painPoints": [
+      "No brand awareness",
+      "Website outdated",
+      "Not in startup directories",
+      "No case studies published",
+      "Portfolio limited"
+    ],
     "challengeImpact": "Missing market opportunity despite capable team.",
     "strategyOverview": "Brand building with case study marketing and strategic positioning.",
     "phase1": "Brand positioning workshop, target customer research, competitor analysis.",
     "phase2": "Website redesign, case study creation, portfolio build-out, social media setup.",
     "phase3": "Content marketing about tech trends, startup interviews, success stories.",
     "phase4": "Industry partnerships, startup event sponsorships, press coverage.",
-    "services": ["Brand Strategy", "Web Design", "Content Marketing", "Social Media", "PR"],
-    "results": ["+350% website traffic", "+8 enterprise clients", "₹2Cr+ in contracts signed"],
-    "metrics": {"Brand Searches": "+400%", "Website Traffic": "+350%", "Enterprise Clients": "+8", "Contract Value": "₹2Cr+"},
+    "services": [
+      "Brand Strategy",
+      "Web Design",
+      "Content Marketing",
+      "Social Media",
+      "PR"
+    ],
+    "results": [
+      "+350% website traffic",
+      "+8 enterprise clients",
+      "₹2Cr+ in contracts signed"
+    ],
+    "metrics": {
+      "Brand Searches": "+400%",
+      "Website Traffic": "+350%",
+      "Enterprise Clients": "+8",
+      "Contract Value": "₹2Cr+"
+    },
     "roi": "₹25L investment generated ₹2Cr in client contracts.",
     "description": "Digital branding and positioning for new business development."
   },
   {
     "id": 8,
+    "image": "assets/case_studies/case-8.png",
     "title": "Multi-Market IT Services Demand Generation",
     "industry": "IT Repair & Services",
     "client": "Ensure Services",
@@ -233,26 +481,59 @@
     "products": "IT support (₹500-2000/hour), AMC contracts (₹2000-5000/month), hardware repair, network solutions.",
     "marketOverview": "IT services market ₹10,000Cr, growing 12% YoY with increasing compliance requirements.",
     "competitors": [
-      {"name": "Large IT service providers", "position": "National presence", "differentiation": "Local quick response"},
-      {"name": "Freelance IT consultants", "position": "Individual, variable quality", "differentiation": "Team with process and accountability"}
+      {
+        "name": "Large IT service providers",
+        "position": "National presence",
+        "differentiation": "Local quick response"
+      },
+      {
+        "name": "Freelance IT consultants",
+        "position": "Individual, variable quality",
+        "differentiation": "Team with process and accountability"
+      }
     ],
     "advantages": "Quick response time (2-4 hours), local presence, certified technicians, 24/7 support, affordable.",
     "challenges": "Organic visibility low, inconsistent lead flow, seasonal demand, local search optimization weak.",
-    "painPoints": ["Not found in local searches", "Competitors better visible", "Seasonal drops (summer, holiday)", "No system for lead qualification", "Website outdated"],
+    "painPoints": [
+      "Not found in local searches",
+      "Competitors better visible",
+      "Seasonal drops (summer, holiday)",
+      "No system for lead qualification",
+      "Website outdated"
+    ],
     "challengeImpact": "Operating at 40% capacity due to inconsistent lead flow despite good reputation.",
     "strategyOverview": "Local SEO with seasonal campaign adjustments and lead nurturing.",
     "phase1": "Local SEO audit, Google Business Profile optimization, local keyword research, competitor local SEO analysis.",
     "phase2": "Google Business Profile enhancement, local citation building, Google Ads for local searches, landing page creation.",
     "phase3": "Seasonal campaign planning, email nurture sequences, customer reviews leverage.",
     "phase4": "Expanding to additional cities, local partnership programs, referral system.",
-    "services": ["Local SEO", "Google Business Profile", "Google Ads", "Email Marketing", "Review Management"],
-    "results": ["+180% local search visibility", "+250% qualified leads", "+140% contract value", "3.6x ROAS", "Operations at 85% capacity"],
-    "metrics": {"Local Visibility": "+180%", "Monthly Leads": "+250%", "Contract Value": "+140%", "ROAS": "3.6x", "Capacity Utilization": "85%"},
+    "services": [
+      "Local SEO",
+      "Google Business Profile",
+      "Google Ads",
+      "Email Marketing",
+      "Review Management"
+    ],
+    "results": [
+      "+180% local search visibility",
+      "+250% qualified leads",
+      "+140% contract value",
+      "3.6x ROAS",
+      "Operations at 85% capacity"
+    ],
+    "metrics": {
+      "Local Visibility": "+180%",
+      "Monthly Leads": "+250%",
+      "Contract Value": "+140%",
+      "ROAS": "3.6x",
+      "Capacity Utilization": "85%"
+    },
     "roi": "₹30L spend generated ₹1.8Cr in contracts.",
     "description": "Local SEO and demand generation for IT services across multiple markets."
   },
   {
     "id": 9,
+    "image": "assets/case_studies/case-9.png",
     "title": "B2B Logistics Acquisition + CRM",
     "industry": "Logistics / B2B Services",
     "client": "ProConnect Logistics",
@@ -264,26 +545,58 @@
     "products": "Warehousing, last-mile delivery, freight forwarding, order fulfillment, fleet management.",
     "marketOverview": "Indian logistics market ₹200Cr+, growing 15% YoY, consolidating industry.",
     "competitors": [
-      {"name": "Large national logistics", "position": "Established, high volume", "differentiation": "Personalized service"},
-      {"name": "Regional operators", "position": "Local, price competitive", "differentiation": "Technology and transparency"}
+      {
+        "name": "Large national logistics",
+        "position": "Established, high volume",
+        "differentiation": "Personalized service"
+      },
+      {
+        "name": "Regional operators",
+        "position": "Local, price competitive",
+        "differentiation": "Technology and transparency"
+      }
     ],
     "advantages": "Cost-efficient, good service reliability, technology integration, flexible pricing.",
     "challenges": "B2B visibility low, lead quality poor, sales process inefficient, no systematic follow-up.",
-    "painPoints": ["RFQs not generating from web", "Quotes taking too long", "No lead tracking system", "Sales team reactive not proactive", "Client comparison online"],
+    "painPoints": [
+      "RFQs not generating from web",
+      "Quotes taking too long",
+      "No lead tracking system",
+      "Sales team reactive not proactive",
+      "Client comparison online"
+    ],
     "challengeImpact": "Losing bids due to slow response and poor visibility.",
     "strategyOverview": "B2B acquisition with CRM automation for lead management.",
     "phase1": "B2B keyword research, SEO audit, CRM selection and setup, sales process documentation.",
     "phase2": "SEO optimization for logistics keywords, Google Ads for B2B, CRM implementation with workflows.",
     "phase3": "Lead scoring, automated follow-up sequences, sales dashboard setup, email nurturing.",
     "phase4": "Territory expansion, account-based marketing for large prospects.",
-    "services": ["SEO", "Google Ads", "CRM Setup", "Sales Automation", "Email Marketing"],
-    "results": ["+280% qualified B2B leads", "-35% lead acquisition cost", "+200% proposal volume", "4.1x ROAS"],
-    "metrics": {"B2B Leads": "+280%", "Lead Cost": "-35%", "Proposals": "+200%", "Win Rate": "+45%", "ROAS": "4.1x"},
+    "services": [
+      "SEO",
+      "Google Ads",
+      "CRM Setup",
+      "Sales Automation",
+      "Email Marketing"
+    ],
+    "results": [
+      "+280% qualified B2B leads",
+      "-35% lead acquisition cost",
+      "+200% proposal volume",
+      "4.1x ROAS"
+    ],
+    "metrics": {
+      "B2B Leads": "+280%",
+      "Lead Cost": "-35%",
+      "Proposals": "+200%",
+      "Win Rate": "+45%",
+      "ROAS": "4.1x"
+    },
     "roi": "₹40L spend generated ₹1.6Cr in contracts.",
     "description": "B2B logistics acquisition with CRM automation for lead management."
   },
   {
     "id": 10,
+    "image": "assets/case_studies/case-10.png",
     "title": "Local SEO + Patient Lead Generation",
     "industry": "Healthcare",
     "client": "Senthil Dental Care",
@@ -295,26 +608,57 @@
     "products": "Dental cleaning, fillings, root canals, crowns, orthodontics, teeth whitening, implants.",
     "marketOverview": "Chennai dental market ₹500Cr+, growing 10% YoY with increasing cosmetic procedures.",
     "competitors": [
-      {"name": "Multi-clinic chains", "position": "Multiple locations", "differentiation": "Personalized single-clinic approach"},
-      {"name": "Other local clinics", "position": "Similar services", "differentiation": "Better online presence"}
+      {
+        "name": "Multi-clinic chains",
+        "position": "Multiple locations",
+        "differentiation": "Personalized single-clinic approach"
+      },
+      {
+        "name": "Other local clinics",
+        "position": "Similar services",
+        "differentiation": "Better online presence"
+      }
     ],
     "advantages": "Experienced dentist (15+ years), good reviews (4.7 rating), modern equipment, affordable.",
     "challenges": "Not found for local dental searches, poor Google visibility, no online presence beyond basic listing.",
-    "painPoints": ["Not showing in Google searches", "Google Maps not optimized", "No reviews on Google", "No website", "Competitors better visible"],
+    "painPoints": [
+      "Not showing in Google searches",
+      "Google Maps not optimized",
+      "No reviews on Google",
+      "No website",
+      "Competitors better visible"
+    ],
     "challengeImpact": "Losing patients to better-visible competitors despite good service.",
     "strategyOverview": "Local SEO and Google Business Profile optimization for local patient acquisition.",
     "phase1": "Local SEO audit, Google Business Profile audit, review collection strategy, local competitor analysis.",
     "phase2": "Google Business Profile optimization, review collection, Google Ads for local searches, basic website.",
     "phase3": "Local citation building, patient testimonials, before/after gallery, local content.",
     "phase4": "Referral program setup, patient retention marketing.",
-    "services": ["Local SEO", "Google Business Profile", "Google Ads", "Website", "Review Management"],
-    "results": ["+320% new patients", "+150% Google visibility", "+45 Google reviews (avg 4.8)", "2.9x ROI"],
-    "metrics": {"New Patients": "+320%", "Google Visibility": "+150%", "Google Reviews": "45", "Booking Rate": "+60%"},
+    "services": [
+      "Local SEO",
+      "Google Business Profile",
+      "Google Ads",
+      "Website",
+      "Review Management"
+    ],
+    "results": [
+      "+320% new patients",
+      "+150% Google visibility",
+      "+45 Google reviews (avg 4.8)",
+      "2.9x ROI"
+    ],
+    "metrics": {
+      "New Patients": "+320%",
+      "Google Visibility": "+150%",
+      "Google Reviews": "45",
+      "Booking Rate": "+60%"
+    },
     "roi": "₹12L spend generated ₹35L in patient revenue.",
     "description": "Local SEO for dental patient acquisition in local market."
   },
   {
     "id": 11,
+    "image": "assets/case_studies/case-11.png",
     "title": "1,000+ Leads/Month | ~5% CVR | $4 CPL",
     "industry": "Dental Healthcare",
     "client": "East Bay Dental Care",
@@ -326,26 +670,59 @@
     "products": "General dentistry, cosmetic dentistry, orthodontics, implants, emergency services. Average patient value $3,500-5,000.",
     "marketOverview": "US dental market $150Cr+, Bay Area highly competitive with 200+ practices in search radius.",
     "competitors": [
-      {"name": "DSO chains", "position": "Multiple locations, corporate", "differentiation": "Personalized care, unified experience"},
-      {"name": "Independent practices", "position": "Variable quality", "differentiation": "Modern, consistent experience"}
+      {
+        "name": "DSO chains",
+        "position": "Multiple locations, corporate",
+        "differentiation": "Personalized care, unified experience"
+      },
+      {
+        "name": "Independent practices",
+        "position": "Variable quality",
+        "differentiation": "Modern, consistent experience"
+      }
     ],
     "advantages": "Experienced dentists, modern facilities, patient satisfaction (4.8 rating), comprehensive services, flexible payment.",
     "challenges": "High CAC ($18-22), inconsistent patient flow, not ranking for key terms, seasonal booking patterns.",
-    "painPoints": ["Not found for cosmetic dentistry searches", "High CAC despite strong brand", "Seasonal booking drops", "Competitor practices ranking higher", "Lead quality variable"],
+    "painPoints": [
+      "Not found for cosmetic dentistry searches",
+      "High CAC despite strong brand",
+      "Seasonal booking drops",
+      "Competitor practices ranking higher",
+      "Lead quality variable"
+    ],
     "challengeImpact": "Operating at 60% chair capacity despite strong reputation, CAC unsustainable for scaling.",
     "strategyOverview": "Performance-driven Google Ads with conversion optimization and geographic targeting.",
     "phase1": "Keyword research, landing page audit, conversion analysis, competitor paid search analysis.",
     "phase2": "Google Ads restructuring, conversion-focused landing pages, call tracking, geographic bid optimization.",
     "phase3": "A/B testing creatives, landing page optimization, audience refinement, seasonal adjustments.",
     "phase4": "YouTube video ads (transformations), remarketing, referral program, location expansion.",
-    "services": ["Google Ads", "Landing Page Optimization", "Conversion Optimization", "Analytics", "Call Tracking"],
-    "results": ["1,000+ leads/month", "~5% conversion rate", "$4 CPL (from $18-22)", "9x ROAS", "312% YoY patient growth"],
-    "metrics": {"Monthly Leads": "1,000+", "Conversion Rate": "~5%", "CPL": "$4", "ROAS": "9x", "Patient Growth": "+312%"},
+    "services": [
+      "Google Ads",
+      "Landing Page Optimization",
+      "Conversion Optimization",
+      "Analytics",
+      "Call Tracking"
+    ],
+    "results": [
+      "1,000+ leads/month",
+      "~5% conversion rate",
+      "$4 CPL (from $18-22)",
+      "9x ROAS",
+      "312% YoY patient growth"
+    ],
+    "metrics": {
+      "Monthly Leads": "1,000+",
+      "Conversion Rate": "~5%",
+      "CPL": "$4",
+      "ROAS": "9x",
+      "Patient Growth": "+312%"
+    },
     "roi": "$600K annual spend generated $5.4M in patient revenue. Clinics expanded from 8 to 10 locations.",
     "description": "Performance marketing for high-volume dental patient acquisition with conversion optimization."
   },
   {
     "id": 12,
+    "image": "assets/case_studies/case-12.png",
     "title": "Google Ads + Dental Lead Generation",
     "industry": "Dental Healthcare",
     "client": "Dentocare India",
@@ -357,26 +734,56 @@
     "products": "General dentistry, preventive care, crowns, root canals, orthodontics. Average treatment cost ₹3000-15000.",
     "marketOverview": "Bangalore-Pune dental market growing 12% YoY, 100+ clinics in each city.",
     "competitors": [
-      {"name": "Premium clinics", "position": "High-end services", "differentiation": "Affordable quality"},
-      {"name": "Budget clinics", "position": "Price focus", "differentiation": "Quality with affordability"}
+      {
+        "name": "Premium clinics",
+        "position": "High-end services",
+        "differentiation": "Affordable quality"
+      },
+      {
+        "name": "Budget clinics",
+        "position": "Price focus",
+        "differentiation": "Quality with affordability"
+      }
     ],
     "advantages": "Affordable pricing, experienced dentists, clean facilities, friendly staff, flexible timings.",
     "challenges": "Low brand awareness, inconsistent patient flow, limited marketing budget, not found online.",
-    "painPoints": ["Weak online visibility", "Not ranking for dental searches", "Word-of-mouth only growth", "Seasonal demand drops", "No tracking of marketing ROI"],
+    "painPoints": [
+      "Weak online visibility",
+      "Not ranking for dental searches",
+      "Word-of-mouth only growth",
+      "Seasonal demand drops",
+      "No tracking of marketing ROI"
+    ],
     "challengeImpact": "Unable to scale efficiently due to inconsistent patient acquisition.",
     "strategyOverview": "Cost-effective Google Ads campaign with geographic targeting.",
     "phase1": "Keyword research for affordable dental services, landing page audit, competitor analysis.",
     "phase2": "Google Ads launch with location targeting, landing page optimization, basic conversion tracking.",
     "phase3": "Bid optimization, keyword refinement, budget allocation by location.",
     "phase4": "Expansion to other services (cosmetic, orthodontics), seasonal campaigns.",
-    "services": ["Google Ads", "Landing Pages", "Analytics", "Keyword Research"],
-    "results": ["+200% inquiries", "+150% patient acquisition", "-40% CAC", "3.8x ROAS"],
-    "metrics": {"Monthly Inquiries": "+200%", "Patients": "+150%", "CAC": "-40%", "ROAS": "3.8x"},
+    "services": [
+      "Google Ads",
+      "Landing Pages",
+      "Analytics",
+      "Keyword Research"
+    ],
+    "results": [
+      "+200% inquiries",
+      "+150% patient acquisition",
+      "-40% CAC",
+      "3.8x ROAS"
+    ],
+    "metrics": {
+      "Monthly Inquiries": "+200%",
+      "Patients": "+150%",
+      "CAC": "-40%",
+      "ROAS": "3.8x"
+    },
     "roi": "₹18L spend generated ₹68L in patient revenue.",
     "description": "Performance marketing for affordable dental services patient acquisition."
   },
   {
     "id": 13,
+    "image": "assets/case_studies/case-13.png",
     "title": "Healthcare Branding + SEO + Performance",
     "industry": "Diagnostic Healthcare",
     "client": "Aarthi Scan",
@@ -388,26 +795,57 @@
     "products": "CT scans, MRI, X-rays, ultrasounds, pathology tests, health checkup packages.",
     "marketOverview": "Diagnostic imaging market growing 15% YoY in India, increasing health consciousness.",
     "competitors": [
-      {"name": "Large diagnostic chains", "position": "Multiple locations", "differentiation": "Neighborhood access"},
-      {"name": "Hospital departments", "position": "Doctor-referred only", "differentiation": "Direct patient access"}
+      {
+        "name": "Large diagnostic chains",
+        "position": "Multiple locations",
+        "differentiation": "Neighborhood access"
+      },
+      {
+        "name": "Hospital departments",
+        "position": "Doctor-referred only",
+        "differentiation": "Direct patient access"
+      }
     ],
     "advantages": "Modern equipment, expert radiologists, quick reports (2-4 hours), affordable pricing, doctor partnerships.",
     "challenges": "Low awareness, not visible in searches, doctors not recommending, inconsistent patient flow.",
-    "painPoints": ["Not found for diagnostic search queries", "Doctors unaware of services", "Weak online presence", "No patient testimonials online", "Competitors better visible"],
+    "painPoints": [
+      "Not found for diagnostic search queries",
+      "Doctors unaware of services",
+      "Weak online presence",
+      "No patient testimonials online",
+      "Competitors better visible"
+    ],
     "challengeImpact": "Underutilized equipment due to low patient flow.",
     "strategyOverview": "Integrated branding with SEO and targeted advertising.",
     "phase1": "Brand positioning research, keyword research, doctor outreach analysis, content gap identification.",
     "phase2": "Website redesign, service page optimization, Google Business Profile, doctor directory listings.",
     "phase3": "Blog content on health topics, patient testimonials, Google Ads, email marketing to doctors.",
     "phase4": "Corporate wellness program marketing, patient referral incentives.",
-    "services": ["Brand Strategy", "SEO", "Google Business Profile", "Google Ads", "Content Marketing"],
-    "results": ["+250% awareness searches", "+180% patient inquiries", "+100% utilization rate", "3.2x ROI"],
-    "metrics": {"Brand Searches": "+250%", "Patient Inquiries": "+180%", "Equipment Utilization": "+100%", "ROI": "3.2x"},
+    "services": [
+      "Brand Strategy",
+      "SEO",
+      "Google Business Profile",
+      "Google Ads",
+      "Content Marketing"
+    ],
+    "results": [
+      "+250% awareness searches",
+      "+180% patient inquiries",
+      "+100% utilization rate",
+      "3.2x ROI"
+    ],
+    "metrics": {
+      "Brand Searches": "+250%",
+      "Patient Inquiries": "+180%",
+      "Equipment Utilization": "+100%",
+      "ROI": "3.2x"
+    },
     "roi": "₹22L spend generated ₹70L in service revenue.",
     "description": "Integrated healthcare branding with SEO and paid advertising."
   },
   {
     "id": 14,
+    "image": "assets/case_studies/case-14.png",
     "title": "Brand + Performance Marketing + Email",
     "industry": "Healthcare / Professional Services",
     "client": "Deevita",
@@ -419,26 +857,57 @@
     "products": "Weight loss programs, skin treatments, hair treatments, aesthetic procedures, wellness packages. Average customer value ₹50K-200K.",
     "marketOverview": "Indian wellness market ₹5000Cr+, growing 20% YoY with increasing cosmetic procedure acceptance.",
     "competitors": [
-      {"name": "Large chains", "position": "Multiple locations", "differentiation": "Specialized wellness focus"},
-      {"name": "Individual doctors", "position": "Limited services", "differentiation": "Comprehensive solution"}
+      {
+        "name": "Large chains",
+        "position": "Multiple locations",
+        "differentiation": "Specialized wellness focus"
+      },
+      {
+        "name": "Individual doctors",
+        "position": "Limited services",
+        "differentiation": "Comprehensive solution"
+      }
     ],
     "advantages": "Professional team, personalized programs, modern clinic, good results, flexible packages.",
     "challenges": "Image-sensitive business, low brand awareness, inconsistent patient flow, hesitation to advertise.",
-    "painPoints": ["Difficult to market sensitive services", "Word-of-mouth only growth", "High patient acquisition cost", "Long decision cycle", "Competitor clinics more visible"],
+    "painPoints": [
+      "Difficult to market sensitive services",
+      "Word-of-mouth only growth",
+      "High patient acquisition cost",
+      "Long decision cycle",
+      "Competitor clinics more visible"
+    ],
     "challengeImpact": "Unable to scale efficiently due to reluctance to market aggressively.",
     "strategyOverview": "Respectful brand building with results-driven performance marketing and patient nurturing.",
     "phase1": "Brand positioning (focus on health not appearance), patient psychology research, ethical messaging.",
     "phase2": "Website with discreet design, Google Ads with appropriate keywords, patient testimonials (with consent).",
     "phase3": "Email nurturing for consultation follow-up, before/after case studies (confidential), webinars on wellness.",
     "phase4": "Referral programs, corporate wellness partnerships, seasonal campaigns.",
-    "services": ["Brand Positioning", "Google Ads", "Email Marketing", "Patient Psychology", "Conversion Optimization"],
-    "results": ["+220% consultations", "+170% patient acquisition", "-45% consultation CAC", "4.5x ROI"],
-    "metrics": {"Consultations": "+220%", "Patients": "+170%", "Consultation CAC": "-45%", "ROI": "4.5x"},
+    "services": [
+      "Brand Positioning",
+      "Google Ads",
+      "Email Marketing",
+      "Patient Psychology",
+      "Conversion Optimization"
+    ],
+    "results": [
+      "+220% consultations",
+      "+170% patient acquisition",
+      "-45% consultation CAC",
+      "4.5x ROI"
+    ],
+    "metrics": {
+      "Consultations": "+220%",
+      "Patients": "+170%",
+      "Consultation CAC": "-45%",
+      "ROI": "4.5x"
+    },
     "roi": "₹20L spend generated ₹90L in patient revenue.",
     "description": "Ethical branding and performance marketing for wellness clinic acquisition."
   },
   {
     "id": 15,
+    "image": "assets/case_studies/case-15.png",
     "title": "B2B Branding + Business Acquisition",
     "industry": "Professional Services",
     "client": "Sysvine",
@@ -450,26 +919,55 @@
     "products": "EHR implementation (₹20L-100L projects), custom healthcare software, IT infrastructure design.",
     "marketOverview": "Healthcare IT market in India growing 18% YoY, increasing hospital digitalization.",
     "competitors": [
-      {"name": "Large consultancies", "position": "Established, big projects", "differentiation": "Healthcare specialized"},
-      {"name": "Regional consultants", "position": "Local", "differentiation": "Better personalization"}
+      {
+        "name": "Large consultancies",
+        "position": "Established, big projects",
+        "differentiation": "Healthcare specialized"
+      },
+      {
+        "name": "Regional consultants",
+        "position": "Local",
+        "differentiation": "Better personalization"
+      }
     ],
     "advantages": "Healthcare expertise, proven implementations, cost-effective, good communication.",
     "challenges": "Unknown brand, not visible in healthcare IT searches, long sales cycles, inconsistent pipeline.",
-    "painPoints": ["Hospital IT managers don't know about Sysvine", "Competitors rank higher", "No case studies published", "No thought leadership", "Long procurement cycles"],
+    "painPoints": [
+      "Hospital IT managers don't know about Sysvine",
+      "Competitors rank higher",
+      "No case studies published",
+      "No thought leadership",
+      "Long procurement cycles"
+    ],
     "challengeImpact": "Inconsistent revenue, difficulty forecasting, competing on price rather than value.",
     "strategyOverview": "B2B thought leadership with case study marketing and strategic positioning.",
     "phase1": "Healthcare IT market research, buyer persona development, competitor positioning analysis.",
     "phase2": "Website with case studies, LinkedIn thought leadership, healthcare IT webinar series.",
     "phase3": "Industry conference sponsorships, healthcare IT community building, email thought leadership.",
     "phase4": "Strategic partnerships with hospitals, referral programs.",
-    "services": ["Brand Strategy", "Content Marketing", "LinkedIn Marketing", "Case Study Creation", "Webinars"],
-    "results": ["+5 enterprise contracts", "₹5.5Cr in project pipeline", "+300% brand awareness"],
-    "metrics": {"Enterprise Contracts": "+5", "Project Pipeline": "₹5.5Cr", "Brand Awareness": "+300%"},
+    "services": [
+      "Brand Strategy",
+      "Content Marketing",
+      "LinkedIn Marketing",
+      "Case Study Creation",
+      "Webinars"
+    ],
+    "results": [
+      "+5 enterprise contracts",
+      "₹5.5Cr in project pipeline",
+      "+300% brand awareness"
+    ],
+    "metrics": {
+      "Enterprise Contracts": "+5",
+      "Project Pipeline": "₹5.5Cr",
+      "Brand Awareness": "+300%"
+    },
     "roi": "₹28L spend generated ₹5.5Cr in project contracts.",
     "description": "B2B branding and positioning for healthcare IT services."
   },
   {
     "id": 16,
+    "image": "assets/case_studies/case-16.png",
     "title": "SEO + Online Booking Acquisition",
     "industry": "Travel & Transportation",
     "client": "Thai Airways",
@@ -481,26 +979,57 @@
     "products": "Airline tickets (₹15K-60K per person), baggage, seat upgrades, meal packages.",
     "marketOverview": "India-Thailand aviation market growing 15% YoY, high seasonal variation, increasing online bookings.",
     "competitors": [
-      {"name": "Major airlines", "position": "Global brands", "differentiation": "Competitive pricing"},
-      {"name": "Travel agencies", "position": "Offline sales", "differentiation": "Online convenience"}
+      {
+        "name": "Major airlines",
+        "position": "Global brands",
+        "differentiation": "Competitive pricing"
+      },
+      {
+        "name": "Travel agencies",
+        "position": "Offline sales",
+        "differentiation": "Online convenience"
+      }
     ],
     "advantages": "Competitive fares, good on-time performance, convenient flight times, good customer reviews.",
     "challenges": "Low organic visibility, not ranking for travel searches, online booking not optimized, OTA dependency.",
-    "painPoints": ["Not found for 'flights to Bangkok' searches", "OTAs (MakeMyTrip, etc.) rank higher", "Direct booking site conversion poor", "Mobile experience weak", "Limited organic traffic"],
+    "painPoints": [
+      "Not found for 'flights to Bangkok' searches",
+      "OTAs (MakeMyTrip, etc.) rank higher",
+      "Direct booking site conversion poor",
+      "Mobile experience weak",
+      "Limited organic traffic"
+    ],
     "challengeImpact": "Missing direct bookings, paying high commissions to OTAs (12-15%), lower margins.",
     "strategyOverview": "SEO focused on travel keywords with optimized booking flow.",
     "phase1": "Travel keyword research, SEO audit, competitor SEO analysis, booking flow evaluation.",
     "phase2": "SEO optimization for flight search terms, website speed optimization, booking interface redesign.",
     "phase3": "Blog content on Thailand travel, destination guides, seasonal content, Google Ads for high-season.",
     "phase4": "Partnerships with travel bloggers, user-generated content campaigns.",
-    "services": ["SEO", "Website Optimization", "Google Ads", "Content Marketing", "Conversion Rate Optimization"],
-    "results": ["+350% organic traffic", "+200% direct bookings", "-15% cost to acquire customer", "3.6x ROI"],
-    "metrics": {"Organic Traffic": "+350%", "Direct Bookings": "+200%", "Customer CAC": "-15%", "Direct Booking %": "+35%"},
+    "services": [
+      "SEO",
+      "Website Optimization",
+      "Google Ads",
+      "Content Marketing",
+      "Conversion Rate Optimization"
+    ],
+    "results": [
+      "+350% organic traffic",
+      "+200% direct bookings",
+      "-15% cost to acquire customer",
+      "3.6x ROI"
+    ],
+    "metrics": {
+      "Organic Traffic": "+350%",
+      "Direct Bookings": "+200%",
+      "Customer CAC": "-15%",
+      "Direct Booking %": "+35%"
+    },
     "roi": "₹16L spend generated ₹58L in additional direct booking revenue (higher margin).",
     "description": "SEO for travel booking acquisition reducing OTA dependency."
   },
   {
     "id": 17,
+    "image": "assets/case_studies/case-17.png",
     "title": "Online Booking + Lead Generation",
     "industry": "Travel & Hospitality",
     "client": "Ace Airport Parking",
@@ -512,26 +1041,57 @@
     "products": "Airport parking bookings (₹300-600/day), valet service, covered parking, loyalty programs.",
     "marketOverview": "Airport parking market growing with 25% annual rise in air travel.",
     "competitors": [
-      {"name": "Airport-operated parking", "position": "Official but expensive", "differentiation": "Better value"},
-      {"name": "Nearby parking options", "position": "Walk-in only", "differentiation": "Online convenience"}
+      {
+        "name": "Airport-operated parking",
+        "position": "Official but expensive",
+        "differentiation": "Better value"
+      },
+      {
+        "name": "Nearby parking options",
+        "position": "Walk-in only",
+        "differentiation": "Online convenience"
+      }
     ],
     "advantages": "Convenient online booking, competitive pricing, door-to-door valet, customer loyalty program.",
     "challenges": "Not found when travelers search online, low mobile conversion, seasonal demand (holidays/weekends).",
-    "painPoints": ["Travelers find airport parking directly", "Not ranking for parking searches", "Website not mobile-optimized", "High cart abandonment", "Seasonal ups and downs"],
+    "painPoints": [
+      "Travelers find airport parking directly",
+      "Not ranking for parking searches",
+      "Website not mobile-optimized",
+      "High cart abandonment",
+      "Seasonal ups and downs"
+    ],
     "challengeImpact": "Missing bookings to direct airport parking and competitor apps.",
     "strategyOverview": "Mobile-optimized booking with search marketing.",
     "phase1": "Mobile UX audit, conversion flow analysis, keyword research.",
     "phase2": "Mobile app optimization, Google Ads for airport parking searches, landing page redesign.",
     "phase3": "Dynamic pricing for peak seasons, email for first-time visitors, retargeting campaigns.",
     "phase4": "Travel app partnerships, corporate programs, airport lounge partnerships.",
-    "services": ["Mobile Optimization", "Google Ads", "Conversion Optimization", "Email Marketing", "Retargeting"],
-    "results": ["+280% mobile bookings", "+150% conversion rate", "-35% CAC", "4.2x ROI"],
-    "metrics": {"Mobile Bookings": "+280%", "Conversion Rate": "+150%", "CAC": "-35%", "Bookings": "+200%"},
+    "services": [
+      "Mobile Optimization",
+      "Google Ads",
+      "Conversion Optimization",
+      "Email Marketing",
+      "Retargeting"
+    ],
+    "results": [
+      "+280% mobile bookings",
+      "+150% conversion rate",
+      "-35% CAC",
+      "4.2x ROI"
+    ],
+    "metrics": {
+      "Mobile Bookings": "+280%",
+      "Conversion Rate": "+150%",
+      "CAC": "-35%",
+      "Bookings": "+200%"
+    },
     "roi": "₹12L spend generated ₹50L in booking revenue.",
     "description": "Mobile-optimized conversion strategy for travel booking."
   },
   {
     "id": 18,
+    "image": "assets/case_studies/case-18.png",
     "title": "High-Intent Google Ads for Tax Leads",
     "industry": "Finance / Tax Services",
     "client": "Sanjay Tax Pro",
@@ -543,26 +1103,55 @@
     "products": "ITR filing (₹2000-5000), tax consultation (₹500/hr), business tax returns, GST returns.",
     "marketOverview": "Tax services market growing 12% YoY, increasing online adoption.",
     "competitors": [
-      {"name": "Large CA firms", "position": "Established", "differentiation": "Affordable, accessible"},
-      {"name": "Online tax platforms", "position": "DIY options", "differentiation": "Expert guidance"}
+      {
+        "name": "Large CA firms",
+        "position": "Established",
+        "differentiation": "Affordable, accessible"
+      },
+      {
+        "name": "Online tax platforms",
+        "position": "DIY options",
+        "differentiation": "Expert guidance"
+      }
     ],
     "advantages": "Expert CAs, affordable, online convenient, quick turnaround, high compliance.",
     "challenges": "Not visible when people search for tax help, low brand awareness, high competition.",
-    "painPoints": ["Not found for 'ITR filing help' searches", "Competitors spending heavily on ads", "High-intent searches missed", "Long customer acquisition cycle"],
+    "painPoints": [
+      "Not found for 'ITR filing help' searches",
+      "Competitors spending heavily on ads",
+      "High-intent searches missed",
+      "Long customer acquisition cycle"
+    ],
     "challengeImpact": "Unable to capitalize on tax season demand.",
     "strategyOverview": "Performance Google Ads targeting high-intent tax searches.",
     "phase1": "High-intent keyword research (ITR help, tax consultant, return filing, etc.), competitor bidding analysis.",
     "phase2": "Google Ads campaign launch, landing pages for different services, call tracking setup.",
     "phase3": "Bid optimization, A/B testing, seasonal budget allocation for tax season (March-June).",
     "phase4": "Retargeting for browsers, email follow-up sequences.",
-    "services": ["Google Ads", "Landing Pages", "Call Tracking", "Conversion Optimization"],
-    "results": ["+420% leads", "-50% CPC", "5.2x ROAS", "250+ returns filed"],
-    "metrics": {"Monthly Leads": "+420%", "CPC": "-50%", "ROAS": "5.2x", "Returns Filed": "250+"},
+    "services": [
+      "Google Ads",
+      "Landing Pages",
+      "Call Tracking",
+      "Conversion Optimization"
+    ],
+    "results": [
+      "+420% leads",
+      "-50% CPC",
+      "5.2x ROAS",
+      "250+ returns filed"
+    ],
+    "metrics": {
+      "Monthly Leads": "+420%",
+      "CPC": "-50%",
+      "ROAS": "5.2x",
+      "Returns Filed": "250+"
+    },
     "roi": "₹10L spend generated ₹52L in service revenue.",
     "description": "High-intent Google Ads for tax service lead acquisition."
   },
   {
     "id": 19,
+    "image": "assets/case_studies/case-19.png",
     "title": "Tax-Filing Search Acquisition",
     "industry": "Finance / Tax Services",
     "client": "MyTaxFiler",
@@ -574,26 +1163,54 @@
     "products": "ITR filing platform (₹500-1500), expert consultations (₹200-500), annual subscription (₹2000).",
     "marketOverview": "Online tax filing market growing 25% YoY.",
     "competitors": [
-      {"name": "Tax2win, ClearTax", "position": "Well-funded, heavy marketing", "differentiation": "Better user experience"},
-      {"name": "CA recommendations", "position": "Offline, trusted", "differentiation": "Online convenience"}
+      {
+        "name": "Tax2win, ClearTax",
+        "position": "Well-funded, heavy marketing",
+        "differentiation": "Better user experience"
+      },
+      {
+        "name": "CA recommendations",
+        "position": "Offline, trusted",
+        "differentiation": "Online convenience"
+      }
     ],
     "advantages": "User-friendly, affordable, expert backup, fast filing, mobile app.",
     "challenges": "Hard to stand out against well-funded competitors, low search visibility.",
-    "painPoints": ["Competitors dominate search ads", "High CPL in tax category", "Tax season short window", "User acquisition costly"],
+    "painPoints": [
+      "Competitors dominate search ads",
+      "High CPL in tax category",
+      "Tax season short window",
+      "User acquisition costly"
+    ],
     "challengeImpact": "Difficult to scale profitably against larger competitors.",
     "strategyOverview": "Performance marketing focused on seasonal tax search demand.",
     "phase1": "Keyword research for tax filing searches, competitor ad analysis.",
     "phase2": "Google Ads campaign with geographic targeting, landing page optimization.",
     "phase3": "Long-tail keyword focus, seasonal budget increase, retargeting.",
     "phase4": "App install campaigns, referral incentives.",
-    "services": ["Google Ads", "Landing Pages", "App Marketing", "Retargeting"],
-    "results": ["+350% app installs", "+200% returns filed", "4.8x ROI"],
-    "metrics": {"App Installs": "+350%", "Returns Filed": "+200%", "Acquisition Cost": "-40%", "ROI": "4.8x"},
+    "services": [
+      "Google Ads",
+      "Landing Pages",
+      "App Marketing",
+      "Retargeting"
+    ],
+    "results": [
+      "+350% app installs",
+      "+200% returns filed",
+      "4.8x ROI"
+    ],
+    "metrics": {
+      "App Installs": "+350%",
+      "Returns Filed": "+200%",
+      "Acquisition Cost": "-40%",
+      "ROI": "4.8x"
+    },
     "roi": "₹8L spend generated ₹38L in filing revenue.",
     "description": "Performance marketing for online tax filing acquisition."
   },
   {
     "id": 20,
+    "image": "assets/case_studies/case-20.png",
     "title": "SEO + E-Commerce Sales Growth",
     "industry": "E-commerce / Retail",
     "client": "Ferns N Petals",
@@ -605,26 +1222,56 @@
     "products": "Flowers (₹300-5000), gifts (₹500-20000), combos, subscriptions, corporate packages.",
     "marketOverview": "Online gifting market ₹3000Cr, growing 20% YoY, highly seasonal.",
     "competitors": [
-      {"name": "PhoolBox", "position": "Well-funded", "differentiation": "Market leader with better delivery"},
-      {"name": "Local florists", "position": "Offline", "differentiation": "Online convenience"}
+      {
+        "name": "PhoolBox",
+        "position": "Well-funded",
+        "differentiation": "Market leader with better delivery"
+      },
+      {
+        "name": "Local florists",
+        "position": "Offline",
+        "differentiation": "Online convenience"
+      }
     ],
     "advantages": "Largest network, same-day delivery, gift variety, good reviews, competitive pricing.",
     "challenges": "Organic visibility declining, paid search expensive, seasonal fluctuations.",
-    "painPoints": ["Competitors outbidding in Google Ads", "SEO ranking dropped", "High CAC despite brand", "Seasonal demand unpredictable"],
+    "painPoints": [
+      "Competitors outbidding in Google Ads",
+      "SEO ranking dropped",
+      "High CAC despite brand",
+      "Seasonal demand unpredictable"
+    ],
     "challengeImpact": "Losing market share to better-marketed competitors.",
     "strategyOverview": "SEO recovery and seasonal paid strategy.",
     "phase1": "SEO audit, keyword ranking analysis, competitor SEO analysis.",
     "phase2": "SEO optimization for gift and flower searches, blog content on gifting occasions.",
     "phase3": "Seasonal Google Ads campaigns, email marketing for occasions, social content.",
     "phase4": "Subscription marketing, corporate B2B programs, influencer partnerships.",
-    "services": ["SEO", "Google Ads", "Email Marketing", "Content Marketing", "Social Media"],
-    "results": ["+180% organic traffic", "+140% seasonal sales", "-30% CAC", "4.1x ROI"],
-    "metrics": {"Organic Traffic": "+180%", "Seasonal Sales": "+140%", "CAC": "-30%", "Market Share": "+8%"},
+    "services": [
+      "SEO",
+      "Google Ads",
+      "Email Marketing",
+      "Content Marketing",
+      "Social Media"
+    ],
+    "results": [
+      "+180% organic traffic",
+      "+140% seasonal sales",
+      "-30% CAC",
+      "4.1x ROI"
+    ],
+    "metrics": {
+      "Organic Traffic": "+180%",
+      "Seasonal Sales": "+140%",
+      "CAC": "-30%",
+      "Market Share": "+8%"
+    },
     "roi": "₹35L spend generated ₹1.4Cr in additional sales.",
     "description": "SEO and seasonal marketing for e-commerce gifting growth."
   },
   {
     "id": 21,
+    "image": "assets/case_studies/case-21.png",
     "title": "SEO + Promotional Marketing for Online Sales",
     "industry": "E-commerce / Food",
     "client": "OnlineCake.in",
@@ -636,26 +1283,56 @@
     "products": "Cakes (₹400-3000), cupcakes, customized orders, subscription boxes, catering.",
     "marketOverview": "Online cake market ₹500Cr, growing 18% YoY, highly seasonal.",
     "competitors": [
-      {"name": "FreshBox, CakesDelivery", "position": "Similar service", "differentiation": "Better variety and customization"},
-      {"name": "Local bakeries", "position": "Offline", "differentiation": "Online convenience"}
+      {
+        "name": "FreshBox, CakesDelivery",
+        "position": "Similar service",
+        "differentiation": "Better variety and customization"
+      },
+      {
+        "name": "Local bakeries",
+        "position": "Offline",
+        "differentiation": "Online convenience"
+      }
     ],
     "advantages": "Wide variety, customization options, same-day delivery, good reviews, affordable.",
     "challenges": "Not ranking for cake searches, competitors better visible, low organic traffic.",
-    "painPoints": ["Not found for 'buy cake online' searches", "Low search visibility", "Competition intense", "Seasonal demand spikes"],
+    "painPoints": [
+      "Not found for 'buy cake online' searches",
+      "Low search visibility",
+      "Competition intense",
+      "Seasonal demand spikes"
+    ],
     "challengeImpact": "Revenue depends on paid ads, no organic base.",
     "strategyOverview": "SEO combined with seasonal promotional campaigns.",
     "phase1": "Keyword research for cake searches, SEO audit, competitor analysis.",
     "phase2": "SEO optimization for cake delivery searches, product page optimization, content creation.",
     "phase3": "Seasonal campaigns (birthdays, festivals), promotional pricing, email marketing.",
     "phase4": "Influencer partnerships (party planners, wedding planners), B2B programs.",
-    "services": ["SEO", "Product Optimization", "Email Marketing", "Social Media", "Promotional Campaigns"],
-    "results": ["+220% organic traffic", "+150% online orders", "-25% CAC", "3.8x ROI"],
-    "metrics": {"Organic Traffic": "+220%", "Orders": "+150%", "CAC": "-25%", "Repeat Orders": "+40%"},
+    "services": [
+      "SEO",
+      "Product Optimization",
+      "Email Marketing",
+      "Social Media",
+      "Promotional Campaigns"
+    ],
+    "results": [
+      "+220% organic traffic",
+      "+150% online orders",
+      "-25% CAC",
+      "3.8x ROI"
+    ],
+    "metrics": {
+      "Organic Traffic": "+220%",
+      "Orders": "+150%",
+      "CAC": "-25%",
+      "Repeat Orders": "+40%"
+    },
     "roi": "₹18L spend generated ₹68L in additional sales.",
     "description": "SEO and promotional marketing for online bakery sales growth."
   },
   {
     "id": 22,
+    "image": "assets/case_studies/case-22.png",
     "title": "SEO + Branding for Real Estate Lead Generation",
     "industry": "Real Estate / Construction",
     "client": "Ground Infra",
@@ -667,26 +1344,56 @@
     "products": "Residential apartments (₹50L-2Cr), commercial spaces (₹1Cr-10Cr+), affordable housing.",
     "marketOverview": "Indian real estate market ₹35 trillion, growing 10% YoY.",
     "competitors": [
-      {"name": "Large builders", "position": "Established reputation", "differentiation": "Quality focus, customer service"},
-      {"name": "Online property platforms", "position": "Aggregators", "differentiation": "Direct developer advantage"}
+      {
+        "name": "Large builders",
+        "position": "Established reputation",
+        "differentiation": "Quality focus, customer service"
+      },
+      {
+        "name": "Online property platforms",
+        "position": "Aggregators",
+        "differentiation": "Direct developer advantage"
+      }
     ],
     "advantages": "Quality construction, transparent pricing, on-time delivery, post-sale service.",
     "challenges": "Low online visibility, not ranking for property searches, brand awareness low.",
-    "painPoints": ["Not found for property searches", "Competitors rank higher", "Low inquiry volume", "No clear value proposition online"],
+    "painPoints": [
+      "Not found for property searches",
+      "Competitors rank higher",
+      "Low inquiry volume",
+      "No clear value proposition online"
+    ],
     "challengeImpact": "Unable to generate consistent leads, slow sales.",
     "strategyOverview": "SEO with brand building and lead nurturing.",
     "phase1": "Real estate SEO research, competitor analysis, buyer journey mapping.",
     "phase2": "Website with property pages, blog on homebuying, Google Business Profile, Google Ads.",
     "phase3": "Virtual tours, 3D walkthroughs, customer testimonials, email nurture.",
     "phase4": "Referral programs, partnership with brokers, financing options showcase.",
-    "services": ["SEO", "Website Development", "Virtual Tours", "Google Ads", "Email Marketing"],
-    "results": ["+280% property inquiries", "+200% serious leads", "-35% lead cost", "3.6x ROI"],
-    "metrics": {"Property Inquiries": "+280%", "Serious Leads": "+200%", "Lead Cost": "-35%", "Units Sold": "+120%"},
+    "services": [
+      "SEO",
+      "Website Development",
+      "Virtual Tours",
+      "Google Ads",
+      "Email Marketing"
+    ],
+    "results": [
+      "+280% property inquiries",
+      "+200% serious leads",
+      "-35% lead cost",
+      "3.6x ROI"
+    ],
+    "metrics": {
+      "Property Inquiries": "+280%",
+      "Serious Leads": "+200%",
+      "Lead Cost": "-35%",
+      "Units Sold": "+120%"
+    },
     "roi": "₹25L spend generated ₹3Cr in property sales.",
     "description": "SEO and branding for real estate lead generation."
   },
   {
     "id": 23,
+    "image": "assets/case_studies/case-23.png",
     "title": "SEO + Social Promotion for Luxury Retail",
     "industry": "Retail / Luxury",
     "client": "AVR Swarna Mahal",
@@ -698,26 +1405,57 @@
     "products": "Gold jewelry (₹50K-5L), diamonds, precious stones, exclusive designs, custom pieces.",
     "marketOverview": "Indian jewelry market ₹1 lakh Cr, growing 8-10% YoY.",
     "competitors": [
-      {"name": "National chains", "position": "Large scale", "differentiation": "Personalized luxury service"},
-      {"name": "Online jewelry", "position": "Digital-first", "differentiation": "Premium retail experience"}
+      {
+        "name": "National chains",
+        "position": "Large scale",
+        "differentiation": "Personalized luxury service"
+      },
+      {
+        "name": "Online jewelry",
+        "position": "Digital-first",
+        "differentiation": "Premium retail experience"
+      }
     ],
     "advantages": "Heritage brand, superior craftsmanship, personalized service, store experience.",
     "challenges": "Not visible online, low web traffic, luxury audience online research needs not met.",
-    "painPoints": ["Low online presence", "Not ranking for jewelry searches", "No digital way to browse designs", "Instagram-only", "Website weak"],
+    "painPoints": [
+      "Low online presence",
+      "Not ranking for jewelry searches",
+      "No digital way to browse designs",
+      "Instagram-only",
+      "Website weak"
+    ],
     "challengeImpact": "Missing online luxury buyers who research before visiting store.",
     "strategyOverview": "SEO for jewelry and social media for engagement.",
     "phase1": "Luxury SEO research, Instagram audit, website assessment.",
     "phase2": "Website redesign with catalog, blog on jewelry trends, Instagram content strategy, Google Business.",
     "phase3": "Design showcase, influencer partnerships, luxury magazine features, email for VIP clients.",
     "phase4": "Custom order marketing, gift registry, luxury experiences.",
-    "services": ["SEO", "Website Design", "Instagram Marketing", "Content Creation", "PR"],
-    "results": ["+250% website traffic", "+300% Instagram followers", "+180% store visits", "2.9x ROI"],
-    "metrics": {"Website Traffic": "+250%", "Instagram Followers": "+300%", "Store Visits": "+180%", "Online Orders": "+120%"},
+    "services": [
+      "SEO",
+      "Website Design",
+      "Instagram Marketing",
+      "Content Creation",
+      "PR"
+    ],
+    "results": [
+      "+250% website traffic",
+      "+300% Instagram followers",
+      "+180% store visits",
+      "2.9x ROI"
+    ],
+    "metrics": {
+      "Website Traffic": "+250%",
+      "Instagram Followers": "+300%",
+      "Store Visits": "+180%",
+      "Online Orders": "+120%"
+    },
     "roi": "₹20L spend generated ₹58L in additional sales.",
     "description": "SEO and social media for luxury retail engagement and sales."
   },
   {
     "id": 24,
+    "image": "assets/case_studies/case-24.png",
     "title": "Search + Display + YouTube Acquisition",
     "industry": "Business Services",
     "client": "Vanan Services",
@@ -729,26 +1467,56 @@
     "products": "Data entry (₹10-50 per record), document processing, transcription, HR services, customer service.",
     "marketOverview": "BPO market ₹250Cr+, growing 12% YoY.",
     "competitors": [
-      {"name": "Large BPO companies", "position": "Scale and reputation", "differentiation": "Quality and responsiveness"},
-      {"name": "Freelance platforms", "position": "Cheaper", "differentiation": "Dedicated team accountability"}
+      {
+        "name": "Large BPO companies",
+        "position": "Scale and reputation",
+        "differentiation": "Quality and responsiveness"
+      },
+      {
+        "name": "Freelance platforms",
+        "position": "Cheaper",
+        "differentiation": "Dedicated team accountability"
+      }
     ],
     "advantages": "Quality work, quick turnaround, affordable, flexible, dedicated teams.",
     "challenges": "Low brand awareness, not found in B2B searches, inconsistent lead flow.",
-    "painPoints": ["Not visible for BPO searches", "Competitors rank higher", "Decision-makers not aware", "Long sales cycles"],
+    "painPoints": [
+      "Not visible for BPO searches",
+      "Competitors rank higher",
+      "Decision-makers not aware",
+      "Long sales cycles"
+    ],
     "challengeImpact": "Underutilized team due to inconsistent pipeline.",
     "strategyOverview": "Multi-channel Google Ads (search, display, YouTube) for B2B awareness and lead generation.",
     "phase1": "B2B keyword research, competitor bidding analysis, target audience definition.",
     "phase2": "Google Search Ads for high-intent searches, Display Ads for awareness, YouTube pre-roll.",
     "phase3": "Audience refinement, creative optimization, landing page tests.",
     "phase4": "Account-based marketing for large prospects, referral programs.",
-    "services": ["Google Search Ads", "Display Ads", "YouTube Ads", "Remarketing", "Landing Pages"],
-    "results": ["+350% awareness", "+280% qualified leads", "+220% pipeline", "3.7x ROAS"],
-    "metrics": {"Brand Awareness": "+350%", "Qualified Leads": "+280%", "Pipeline Value": "+220%", "ROAS": "3.7x"},
+    "services": [
+      "Google Search Ads",
+      "Display Ads",
+      "YouTube Ads",
+      "Remarketing",
+      "Landing Pages"
+    ],
+    "results": [
+      "+350% awareness",
+      "+280% qualified leads",
+      "+220% pipeline",
+      "3.7x ROAS"
+    ],
+    "metrics": {
+      "Brand Awareness": "+350%",
+      "Qualified Leads": "+280%",
+      "Pipeline Value": "+220%",
+      "ROAS": "3.7x"
+    },
     "roi": "₹30L spend generated ₹1.1Cr in contracts.",
     "description": "Multi-channel Google Ads for B2B service acquisition."
   },
   {
     "id": 25,
+    "image": "assets/case_studies/case-25.png",
     "title": "SEO + Brand Visibility Growth",
     "industry": "Technology / Manufacturing",
     "client": "Maharaja Rice",
@@ -760,21 +1528,50 @@
     "products": "Premium rice varieties (₹60-250/kg), organic rice, specialty rice, branded packaging.",
     "marketOverview": "Indian rice market ₹3000Cr, online segment growing 15% YoY.",
     "competitors": [
-      {"name": "Large rice brands", "position": "Established", "differentiation": "Direct value, freshness guarantee"},
-      {"name": "Local farmers", "position": "Direct sales", "differentiation": "Brand trust and convenience"}
+      {
+        "name": "Large rice brands",
+        "position": "Established",
+        "differentiation": "Direct value, freshness guarantee"
+      },
+      {
+        "name": "Local farmers",
+        "position": "Direct sales",
+        "differentiation": "Brand trust and convenience"
+      }
     ],
     "advantages": "Quality rice, direct from farmers, competitive pricing, fresh guaranteed, eco-friendly.",
     "challenges": "Low brand awareness, not visible online, organic traffic minimal, market fragmented.",
-    "painPoints": ["Not found for rice searches", "Big brands dominate", "No online presence", "Wholesale only growth"],
+    "painPoints": [
+      "Not found for rice searches",
+      "Big brands dominate",
+      "No online presence",
+      "Wholesale only growth"
+    ],
     "challengeImpact": "Limited to wholesale channel, missing retail D2C opportunity.",
     "strategyOverview": "SEO and branding to build online presence and D2C channel.",
     "phase1": "Agricultural SEO research, brand positioning, competitor analysis.",
     "phase2": "Website with product catalog, blog on rice nutrition, e-commerce setup.",
     "phase3": "SEO optimization, recipe content, farmer story content, Google Business.",
     "phase4": "Influencer partnerships, subscription boxes, wholesale expansion.",
-    "services": ["SEO", "E-commerce Setup", "Content Marketing", "Social Media", "Branding"],
-    "results": ["+280% organic traffic", "+200% D2C sales", "+180% brand searches", "2.8x ROI"],
-    "metrics": {"Organic Traffic": "+280%", "D2C Revenue": "+200%", "Brand Awareness": "+180%", "Online Customer Base": "+250%"},
+    "services": [
+      "SEO",
+      "E-commerce Setup",
+      "Content Marketing",
+      "Social Media",
+      "Branding"
+    ],
+    "results": [
+      "+280% organic traffic",
+      "+200% D2C sales",
+      "+180% brand searches",
+      "2.8x ROI"
+    ],
+    "metrics": {
+      "Organic Traffic": "+280%",
+      "D2C Revenue": "+200%",
+      "Brand Awareness": "+180%",
+      "Online Customer Base": "+250%"
+    },
     "roi": "₹16L spend generated ₹45L in direct sales.",
     "description": "SEO and branding for agricultural products online visibility and D2C growth."
   }

@@ -386,6 +386,7 @@
             border: 1px solid var(--border);
             margin-bottom: 32px;
             transition: all 0.3s;
+            min-width: 0;
         }
 
         .case-study:hover {
@@ -395,6 +396,10 @@
 
         .case-study.reverse {
             grid-template-columns: 1fr 300px;
+        }
+
+        .case-study > * {
+            min-width: 0;
         }
 
         .case-study-image {
@@ -407,6 +412,13 @@
             justify-content: center;
             font-size: 13px;
             color: var(--text-secondary);
+            overflow: hidden;
+        }
+
+        .case-study-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .case-study-content h3 {
@@ -2436,7 +2448,7 @@
 
 <!-- EXPERTISE AREAS -->
 <section id="expertise">
-    <h2 style="line-height: 0;">My Approach to Growth</h2>
+    <h2>My Approach to Growth</h2>
     <p>I help companies grow through three strategic pillars: acquiring customers efficiently, converting them at higher rates, and retaining them for lifetime value.</p>
     
     <div class="expertise-grid">
@@ -2483,7 +2495,7 @@
 
 <!-- CORE SERVICES BREAKDOWN -->
 <section id="services" class="services-breakdown alt" style="border-radius: 18px;>
-    <h2 style="line-height: 0;">Core Services Breakdown</h2>
+    <h2>Core Services Breakdown</h2>
     <p class="services-subtitle" style="font-size: 18px; line-height: 3;">Eight Growth Capabilities Built Around Your Business Goals</p>
     
     <div class="services-grid-new">
@@ -2636,7 +2648,7 @@
 
 <!-- CLIENT TESTIMONIALS -->
 <section id="testimonials">
-    <h2 style="line-height: 0;">What Clients Say</h2>
+    <h2>What Clients Say</h2>
     <p style="line-height: 1;">Trusted by founders and marketing leaders at growth-focused companies.</p>
     
     <div class="testimonials-carousel-wrapper">
